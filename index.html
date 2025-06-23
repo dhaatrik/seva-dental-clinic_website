@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seva Dental Clinic | Your Smile Adventure Begins Here</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Your Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ======================= HEADER & NAVIGATION ======================= -->
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <i class="fa-solid fa-tooth"></i> Seva Dental Clinic
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="smile-score.html">Smile Score</a></li>
+                    <li><a href="#testimonials">Patient Stories</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="tel:0000000000" class="phone-number">📞 0000000000</a>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle light and dark mode">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <a href="#contact" class="btn btn-primary">Book Your Smile Adventure</a>
+            </div>
+            <button id="mobile-menu-toggle" class="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- ======================= HERO SECTION ======================= -->
+        <section id="home" class="hero">
+            <div class="container hero-content">
+                <h1>Your Smile Adventure Begins Here.</h1>
+                <p>Welcome to Seva Dental Clinic, where we combine expert care with a gentle touch to make your journey to a healthy smile a positive and reassuring experience.</p>
+                <a href="#contact" class="btn btn-primary btn-large">Book Your Smile Adventure</a>
+            </div>
+        </section>
+
+        <!-- ======================= ABOUT US SECTION ======================= -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Meet Your Guide on the Adventure</h2>
+                    <p>Trust, Comfort, and Community</p>
+                </div>
+                <div class="about-content">
+                    <div class="about-image">
+                        <!-- NOTE: Replace with a real photo of the doctor -->
+                        <img src="https://via.placeholder.com/400x400.png?text=Dr.+K.+Bhattacharya" alt="Dr. Krishnendu Bhattacharya">
+                    </div>
+                    <div class="about-text">
+                        <h3>Dr. Krishnendu Bhattacharya</h3>
+                        <p class="qualifications">BDS, MDS (Prosthodontics and Crown & Bridge)</p>
+                        <p>Dr. Krishnendu Bhattacharya is dedicated to providing patient-centric dental care. His expertise lies in complex procedures like dental implants and bridges, but his true focus is on making every patient—especially those who feel anxious—feel understood and comfortable.</p>
+                        <p>He believes that education is the first step in care, and he takes the time to explain every procedure clearly, ensuring you are a confident partner in your own oral health journey.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================= SERVICES SECTION ======================= -->
+        <section id="services" class="services">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Your Map to a Healthier Smile</h2>
+                    <p>Explore our comprehensive range of dental services.</p>
+                </div>
+                <div class="services-grid">
+                    <!-- Each card now links to a (future) detailed page -->
+                    <a href="preventative-care.html" class="service-card-link">
+                        <div class="service-card">
+                            <i class="fa-solid fa-shield-heart"></i>
+                            <h3>Preventative Care</h3>
+                            <p>Routine check-ups and cleanings to keep your adventure on the right path.</p>
+                        </div>
+                    </a>
+                    <a href="pediatric-dentistry.html" class="service-card-link">
+                        <div class="service-card">
+                            <i class="fa-solid fa-children"></i>
+                            <h3>Pediatric Dentistry</h3>
+                            <p>Making dental care a fun and positive experience for our youngest explorers.</p>
+                        </div>
+                    </a>
+                    <a href="root-canals.html" class="service-card-link">
+                        <div class="service-card">
+                            <i class="fa-solid fa-gear"></i>
+                            <h3>Painless Root Canals</h3>
+                            <p>Modern, comfortable procedures to relieve pain and save your natural teeth.</p>
+                        </div>
+                    </a>
+                    <a href="dental-implants.html" class="service-card-link">
+                        <div class="service-card">
+                            <i class="fa-solid fa-anchor"></i>
+                            <h3>Dental Implants</h3>
+                            <p>The gold standard solution for replacing missing teeth for a lifetime of smiles.</p>
+                        </div>
+                    </a>
+                    <a href="teeth-whitening.html" class="service-card-link">
+                        <div class="service-card">
+                            <i class="fa-solid fa-gem"></i>
+                            <h3>Teeth Whitening</h3>
+                            <p>A safe and fast way to achieve a brighter, more confident smile.</p>
+                        </div>
+                    </a>
+                    <a href="crowns-bridges.html" class="service-card-link">
+                        <div class="service-card">
+                            <i class="fa-solid fa-puzzle-piece"></i>
+                            <h3>Crowns & Bridges</h3>
+                            <p>Restoring the function and beauty of your smile with custom solutions.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================= SMILE SCORE CALL TO ACTION ======================= -->
+        <section id="smile-score-cta" class="smile-score-quiz">
+            <div class="container">
+                <div class="section-title">
+                    <h2>The Smile Score Challenge!</h2>
+                    <p>Take our 2-minute quiz to discover your "Smile Explorer Rank" and get personalized tips.</p>
+                </div>
+                <div style="text-align: center; margin-top: 30px;">
+                    <a href="smile-score.html" class="btn btn-primary btn-large">Take the Challenge Now!</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================= TESTIMONIALS SECTION ======================= -->
+        <section id="testimonials" class="testimonials">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Stories from Fellow Smile Adventurers</h2>
+                </div>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <blockquote>"I've been terrified of dentists my whole life. Dr. Bhattacharya and his team were different. They listened without judgment. I've finally found a clinic I can trust."</blockquote>
+                        <cite>– Priya S., Overcame Dental Anxiety</cite>
+                    </div>
+                    <div class="testimonial-card">
+                        <blockquote>"As a working professional, I needed efficiency. The online booking was a breeze, the appointment was on time, and the whitening results were fantastic. Highly recommended."</blockquote>
+                        <cite>– Amit R., Busy Professional</cite>
+                    </div>
+                    <div class="testimonial-card">
+                        <blockquote>"Finding a dentist for my kids was a huge worry. They call the check-up a 'tooth adventure' and my son actually looks forward to going. The atmosphere is so friendly."</blockquote>
+                        <cite>– Sunita M., Proactive Parent</cite>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================= CONTACT SECTION ======================= -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Let's Start Your Adventure</h2>
+                    <p>Book an appointment or send us a message.</p>
+                </div>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>Get In Touch</h3>
+                        <p><i class="fa-solid fa-location-dot"></i> <strong>Address:</strong><br>[Your Full Clinic Address], Dum Dum, Kolkata, West Bengal</p>
+                        <p><i class="fa-solid fa-phone"></i> <strong>Phone:</strong><br><a href="tel:0000000000">0000000000</a></p>
+                        <p><i class="fa-solid fa-envelope"></i> <strong>Email:</strong><br><a href="mailto:hello@sevadental.in">hello@sevadental.in</a></p>
+                        <p><i class="fa-solid fa-clock"></i> <strong>Clinic Hours:</strong><br>Mon - Sat: 9:00 AM - 7:00 PM<br>Sunday: Closed</p>
+                    </div>
+                    <div class="contact-form-map">
+                        <!-- NOTE: This button should link to your actual online booking system/software. -->
+                        <a href="#" class="btn btn-primary btn-large booking-btn">Book Your Smile Adventure Online</a>
+                        
+                        <!-- NOTE: Go to Google Maps, find your address, click "Share", then "Embed a map", and copy/paste the HTML here to replace this placeholder. -->
+                        <div class="map-placeholder">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d117861.99220037138!2d88.35333633215573!3d22.62338274996946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f89e46d84dbf55%3A0xde3971a5395a32fe!2sDum%20Dum%2C%20Kolkata%2C%20West%20Bengal!5e0!3m2!1sen!2sin!4v1716301217983!5m2!1sen!2sin" title="Location of Seva Dental Clinic on Google Maps" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    
+    <!-- ======================= FOOTER ======================= -->
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-col">
+                <a href="#" class="logo">
+                    <i class="fa-solid fa-tooth"></i> Seva Dental Clinic
+                </a>
+                <p>Guiding you on a journey to lifelong oral health with compassion and care.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#testimonials">Patient Stories</a></li> <!-- Still links to section on homepage -->
+                    <li><a href="#contact">Contact & Book</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <!-- NOTE: Replace '#' with your actual social media profile links -->
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 Seva Dental Clinic. All Rights Reserved. | Designed with care.</p>
+        </div>
+    </footer>
+
+    <!-- ======================= SCROLL TO TOP BUTTON ======================= -->
+    <button id="scrollTopBtn" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+    <!-- Your Custom JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smile Score Challenge | Seva Dental Clinic</title>
+    <meta name="description" content="Take the Seva Dental Clinic Smile Score Challenge to discover your 'Smile Explorer Rank' and get personalized oral health tips.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Your Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Service Page Specific CSS (for consistent section styling) -->
+    <link rel="stylesheet" href="service-page.css">
+</head>
+<body>
+
+    <!-- ======================= HEADER (Reused from index.html) ======================= -->
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-tooth"></i> Seva Dental Clinic
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html#about">About Us</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="smile-score.html">Smile Score</a></li> <!-- Link to this page -->
+                    <li><a href="index.html#testimonials">Patient Stories</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="tel:0000000000" class="phone-number">📞 0000000000</a>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle light and dark mode">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <a href="index.html#contact" class="btn btn-primary">Book Your Smile Adventure</a>
+            </div>
+            <button id="mobile-menu-toggle" class="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- ======================= SMILE SCORE QUIZ SECTION ======================= -->
+        <section id="smile-score-page" class="smile-score-quiz service-hero">
+            <div class="container">
+                <div class="section-title">
+                    <h1>The Smile Score Challenge!</h1>
+                    <p>Take our 2-minute quiz to discover your "Smile Explorer Rank" and get personalized tips.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="quiz-content-section">
+            <div class="container">
+                <form id="quiz-form">
+                    <div class="quiz-question">
+                        <p>1. How often do you floss your teeth?</p>
+                        <label><input type="radio" name="q1" value="2" required> Daily, like a true explorer!</label>
+                        <label><input type="radio" name="q1" value="1"> A few times a week.</label>
+                        <label><input type="radio" name="q1" value="0"> What's flossing?</label>
+                    </div>
+                    <div class="quiz-question">
+                        <p>2. When you brush, do your gums ever bleed?</p>
+                        <label><input type="radio" name="q2" value="2" required> Never.</label>
+                        <label><input type="radio" name="q2" value="1"> Sometimes.</label>
+                        <label><input type="radio" name="q2" value="0"> Often.</label>
+                    </div>
+                    <div class="quiz-question">
+                        <p>3. How long has it been since your last dental check-up?</p>
+                        <label><input type="radio" name="q3" value="2" required> Within the last year.</label>
+                        <label><input type="radio" name="q3" value="1"> 1-2 years ago.</label>
+                        <label><input type="radio" name="q3" value="0"> I can't remember.</label>
+                    </div>
+                    <div class="quiz-question">
+                        <p>4. How often do you consume sugary drinks or snacks between meals?</p>
+                        <label><input type="radio" name="q4" value="2" required> Rarely, I stick to main meals.</label>
+                        <label><input type="radio" name="q4" value="1"> Sometimes, a few times a week.</label>
+                        <label><input type="radio" name="q4" value="0"> Frequently, most days.</label>
+                    </div>
+                    <div class="quiz-question">
+                        <p>5. Do you experience sensitivity to hot, cold, or sweet foods?</p>
+                        <label><input type="radio" name="q5" value="2" required> No, my teeth feel great.</label>
+                        <label><input type="radio" name="q5" value="1"> Occasionally.</label>
+                        <label><input type="radio" name="q5" value="0"> Yes, it's a common issue.</label>
+                    </div>
+                    <div class="quiz-question">
+                        <p>6. What kind of toothbrush do you use?</p>
+                        <label><input type="radio" name="q6" value="2" required> A soft-bristled brush, as recommended.</label>
+                        <label><input type="radio" name="q6" value="1"> A medium or hard-bristled brush.</label>
+                        <label><input type="radio" name="q6" value="0"> I'm not sure what kind it is.</label>
+                    </div>
+                    <div class="quiz-question">
+                        <p>7. Do you notice any persistent bad breath (halitosis)?</p>
+                        <label><input type="radio" name="q7" value="2" required> No, not an issue for me.</label>
+                        <label><input type="radio" name="q7" value="1"> Sometimes, especially in the morning.</label>
+                        <label><input type="radio" name="q7" value="0"> Yes, it's a concern for me.</label>
+                    </div>
+                    <button type="submit" class="btn btn-secondary">See My Score!</button>
+                </form>
+                <div id="quiz-results" class="quiz-results">
+                    <!-- Results will be injected here by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+    </main>
+    
+    <!-- ======================= FOOTER (Reused from index.html) ======================= -->
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-col">
+                <a href="index.html" class="logo">
+                    <i class="fa-solid fa-tooth"></i> Seva Dental Clinic
+                </a>
+                <p>Guiding you on a journey to lifelong oral health with compassion and care.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html#about">About Us</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="index.html#testimonials">Patient Stories</a></li>
+                    <li><a href="index.html#contact">Contact & Book</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 Seva Dental Clinic. All Rights Reserved. | Designed with care.</p>
+        </div>
+    </footer>
+
+    <!-- ======================= SCROLL TO TOP BUTTON ======================= -->
+    <button id="scrollTopBtn" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+    <!-- Your Custom JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>

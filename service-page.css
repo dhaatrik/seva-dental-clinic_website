@@ -1,0 +1,143 @@
+/* ======================= SERVICE PAGE STYLES ======================= */
+
+/* Service Hero Section */
+/* Also used for smile-score-quiz page hero */
+.service-hero {
+    background-color: var(--bg-accent);
+    padding: 60px 0;
+    text-align: center;
+    margin-top: 80px; /* Header height */
+}
+
+.service-hero h1 {
+    font-size: 3rem;
+    color: var(--heading-color);
+}
+
+#smile-score-page h1 {
+    font-size: 3rem; /* Override for the quiz page title */
+}
+
+.service-hero p {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    font-family: var(--body-font);
+}
+
+/* Service Details Section */
+.service-details-container {
+    display: flex;
+    gap: 50px;
+}
+
+.service-main-content {
+    flex: 2; /* Takes up 2/3 of the space */
+}
+
+.service-main-content h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+.service-main-content h3 {
+    font-size: 1.6rem;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.service-main-content ol {
+    list-style-position: inside;
+    padding-left: 10px;
+}
+
+.service-main-content ol li {
+    margin-bottom: 10px;
+}
+
+/* Sidebar */
+.service-sidebar {
+    flex: 1; /* Takes up 1/3 of the space */
+    margin-top: 10px;
+}
+
+.sidebar-widget {
+    background-color: var(--bg-secondary);
+    padding: 25px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.sidebar-widget h4 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--gentle-green);
+    padding-bottom: 10px;
+}
+
+.sidebar-widget ul {
+    list-style: none;
+}
+
+.sidebar-widget ul li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sidebar-widget ul li i {
+    color: var(--gentle-green);
+}
+
+.sidebar-widget.cta-widget {
+    background-color: var(--bg-accent);
+    text-align: center;
+}
+
+/* FAQ Section */
+.faq-section {
+    background-color: var(--bg-accent);
+}
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background-color: var(--card-bg);
+    padding: 25px;
+    border-radius: 8px;
+    border-left: 4px solid var(--gentle-green);
+}
+
+.faq-item h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+/* Responsive adjustments for service pages */
+@media (max-width: 992px) {
+    .service-details-container {
+        flex-direction: column;
+    }
+    .service-sidebar {
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .service-hero h1 {
+        font-size: 2.5rem;
+    }
+}
+
+/* Specific styling for the quiz content section */
+.quiz-content-section {
+    padding-top: 40px; /* Adjust padding as needed */
+    padding-bottom: 80px;
+    background-color: var(--bg-primary); /* Ensure it stands out from the hero */
+}
