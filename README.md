@@ -1,105 +1,151 @@
-# 🦷 Seva Dental Clinic - Your Smile Adventure
+# 🦷 Seva Dental Clinic — Your Smile Adventure
 
-Welcome to the **Seva Dental Clinic** web application! 
+Welcome to **Seva Dental Clinic**, a modern, patient-centric web application designed to transform dental care into a positive, empowering "Smile Adventure." Built with cutting-edge web technologies and integrated with Google's Gemini AI, this platform demystifies oral health through interactive experiences and personalized guidance.
 
-This project is a modern, welcoming, and responsive website designed to demystify dental care. We call it a "Smile Adventure" because we believe looking after your teeth should be a positive journey, not a scary chore.
-
-One of the coolest features is the **AI-Powered Smile Quiz**, which uses Google's Gemini API to give patients personalized advice based on their habits.
-
----
-
-## ✨ Features
-
-- **📱 Fully Responsive**: Looks amazing on mobile phones, tablets, and desktop computers.
-- **📝 Interactive Smile Quiz**: A fun way for users to assess their oral health.
-- **🤖 AI Integration**: Uses **Google Gemini** to analyze quiz results and generate personalized, encouraging tips.
-- **💬 Smile Guide Chatbot**: A friendly AI assistant to answer questions about the clinic and services.
-- **🏥 Detailed Service Pages**: Clear explanations of dental procedures.
-- **🎨 Modern Design**: Built with a calming color palette (Calm Blue, Gentle Green, Warm Coral) to reduce anxiety.
+[![MIT License](https://img.shields.io/badge/License-MIT-forestgreen.svg)](https://opensource.org/licenses/MIT)
+[![React](https://img.shields.io/badge/React-19.1-blue.svg)](https://react.dev/)
+[![Vite](https://img.shields.io/badge/Vite-6.2-purple.svg)](https://vitejs.dev/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4-skyblue.svg)](https://tailwindcss.com/)
 
 ---
 
-## 🛠️ Technology Stack
+## 📖 Table of Contents
 
-This project is built using modern web technologies that are powerful yet easy to learn:
+- [✨ Key Features](#-key-features)
+- [🛠️ Tech Stack](#️-tech-stack)
+- [🚀 Getting Started](#-getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+  - [Environment Configuration](#environment-configuration)
+- [📁 Project Structure](#-project-structure)
+- [🎨 Customization & Branding](#-customization--branding)
+- [🤝 Contributing](#-contributing)
+- [📄 License](#-license)
 
-- **Frontend Library**: [React](https://react.dev/) (v19) - For building the user interface components.
-- **Styling**: [Tailwind CSS](https://tailwindcss.com/) - For rapid and beautiful styling directly in your markup.
-- **Routing**: [React Router](https://reactrouter.com/) - For navigation between pages.
-- **Artificial Intelligence**: [Google GenAI SDK](https://www.npmjs.com/package/@google/genai) - To talk to the Gemini models.
-- **Icons**: [Heroicons](https://heroicons.com/) - For clean, professional SVG icons.
+---
+
+## ✨ Key Features
+
+- **🤖 AI-Powered Smile Quiz**: An interactive "Smile Score Challenge" that uses **Google Gemini AI** to analyze oral health habits and provide personalized, encouraging tips.
+- **💬 Smile Guide Chatbot**: A friendly AI assistant integrated with the clinic's service data to answer patient inquiries in real-time.
+- **🌍 Multi-Language Support**: Seamlessly switch between **English, Hindi, and Bengali** to cater to a diverse patient base.
+- **🎨 Premium UX/UI**: 
+  - **Smooth Scrolling**: Powered by `Lenis` for a cinematic feel.
+  - **Fluid Animations**: High-performance transitions using `Framer Motion`.
+  - **Custom Cursor & Noise Overlay**: Subtle design touches for a modern, tactile interface.
+- **📱 Fully Responsive**: Optimized for every device, from mobile to ultra-wide desktops.
+- **🏥 Comprehensive Service Pages**: Detailed information on treatments from routine check-ups to advanced implants.
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+- **Framework**: [React 19](https://react.dev/)
+- **Build Tool**: [Vite](https://vitejs.dev/)
+- **Routing**: [React Router 7](https://reactrouter.com/)
+- **State & Logic**: Functional components with Hooks
+
+### Styling & Animation
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/) (Custom palette: Forest Green, Champagne Gold, Soft Beige)
+- **Animations**: [Framer Motion](https://www.framer.com/motion/)
+- **Smooth Scroll**: [Lenis](https://lenis.darkroom.engineering/)
+- **Icons**: [Lucide React](https://lucide.dev/) & [Heroicons](https://heroicons.com/)
+
+### Artificial Intelligence
+- **LLM**: [Google Gemini 1.5 Flash](https://ai.google.dev/) via `@google/genai` SDK
+
+### Utilities
+- **Internationalization**: [i18next](https://www.i18next.com/)
+- **SEO**: [React Helmet Async](https://github.com/staylor/react-helmet-async)
 
 ---
 
 ## 🚀 Getting Started
 
-### 1. Prerequisites
-To run this project fully, you need an **API Key** for the AI features.
+### Prerequisites
+- **Node.js**: v18.0.0 or higher
+- **npm** or **yarn**
+- **Google AI Studio API Key**: Required for AI features (Quiz & Chatbot)
 
-### 2. Setting up the API Key (Important!)
-The "Smile Quiz" and "Chatbot" rely on the Google Gemini API. Without a key, these features won't work, although the rest of the site will function fine.
+### Installation
 
-1.  Visit [Google AI Studio](https://aistudio.google.com/).
-2.  Create a free API Key.
-3.  Set this key in your environment variables as `API_KEY`.
-    *   *If you are using a cloud IDE or container:* Look for the "Environment Variables" or "Secrets" settings.
-    *   *If running locally:* You would typically use a `.env` file, but in this specific setup, ensure `process.env.API_KEY` is accessible.
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/DhaatuTheGamer/seva-dental-clinic_website.git
+   cd seva-dental-clinic_website
+   ```
 
-### 3. Google Maps (Optional)
-To see the map on the Contact page:
-1.  Get a Google Maps JavaScript API Key.
-2.  Set it as `GOOGLE_MAPS_API_KEY` in your environment.
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+3. **Start the development server:**
+   ```bash
+   npm run dev
+   ```
+
+### Environment Configuration
+
+Create a `.env` file in the root directory and add your API keys:
+
+```env
+# Google Gemini API Key
+API_KEY=your_gemini_api_key_here
+
+# Google Maps API Key (Optional, for Contact page)
+GOOGLE_MAPS_API_KEY=your_google_maps_key_here
+```
 
 ---
 
 ## 📁 Project Structure
 
-Here is a quick map of the files so you know where to find things:
-
 ```text
 .
-├── components/          # 🧩 Building blocks (Buttons, Cards, Modals)
-├── pages/               # 📄 Full pages (Home, About, Services)
-├── services/            # 🔌 Connection to external services (Gemini API)
-├── App.tsx              # 🚦 Main App component & Routing setup
-├── constants.ts         # 📝 TEXT & DATA (Change clinic info here!)
-├── types.ts             # 🏷️ TypeScript definitions (Data structures)
-└── index.html           # 🌐 The main HTML file & Tailwind Config
+├── components/          # 🧩 Reusable UI components (Buttons, Cards, AI Chat)
+├── locales/             # 🌐 Translation files (en.json, hi.json, bn.json)
+├── pages/               # 📄 Application views (Home, Quiz, Services, etc.)
+├── services/            # 🔌 External API integrations (Gemini SDK)
+├── constants.ts         # 📝 Centralized data (Clinic info, Quiz questions)
+├── types.ts             # 🏷️ TypeScript interfaces and enums
+├── App.tsx              # 🚦 Root component & Navigation setup
+├── index.html           # 🌐 HTML entry point & Tailwind configuration
+└── index.tsx            # 🚀 React entry point
 ```
 
 ---
 
-## 🎨 How to Customize
+## 🎨 Customization & Branding
 
-Want to make this site your own? Here are the easiest ways to tweak it:
+### Update Clinic Information
+Modify `constants.ts` to update clinic name, contact details, opening hours, and service descriptions.
 
-### Change Text & Data
-Go to `constants.ts`. Here you can easily update:
-- Clinic Name & Address
-- Phone Numbers & Emails
-- Service Descriptions
-- Testimonials
-- Quiz Questions
-
-### Change Colors
-Go to `index.html`. Inside the `<script>` tag for Tailwind config, you'll find the color palette:
-```js
-colors: {
-  'calm-blue': '#E0F7FA',
-  'gentle-green': '#A5D6A7',
-  'trustworthy-white': '#FFFFFF',
-  'warm-coral': '#FFAB91',
-  ...
-}
-```
-Change these hex codes to match your brand!
+### Branding & Colors
+The visual identity is defined in the `tailwind.config` section of `index.html`. You can easily swap the primary palette:
+- `gentle-green`: `#1A362D` (Primary brand color)
+- `warm-coral`: `#D4AF37` (Accent gold)
+- `calm-blue`: `#F0EBE1` (Soft background)
 
 ---
 
 ## 🤝 Contributing
 
-We welcome contributions! If you have ideas on how to make the "Smile Adventure" even better, feel free to fork the project and submit a pull request.
+We welcome contributions from the community! To contribute:
+
+1. **Fork** the repository.
+2. **Create** a new branch (`git checkout -b feature/AmazingFeature`).
+3. **Commit** your changes (`git commit -m 'Add some AmazingFeature'`).
+4. **Push** to the branch (`git push origin feature/AmazingFeature`).
+5. **Open** a Pull Request.
 
 ---
 
-*Built with ❤️ and a bright smile.*
+## 📄 License
+
+Distributed under the **MIT License**. See `LICENSE` for more information.
+
+---
+
+*Built with ❤️ to bring more smiles to the world.*
