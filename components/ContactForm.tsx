@@ -46,22 +46,22 @@ const ContactForm: React.FC = () => {
     }
 
     setIsSubmitting(true);
-    await new Promise(resolve => setTimeout(resolve, 1000)); 
+    await new Promise(resolve => setTimeout(resolve, 1000));
     console.log({ name, email, message });
-    
+
     setSubmitted(true);
     setName('');
     setEmail('');
     setMessage('');
     setErrors({});
     setIsSubmitting(false);
-    
+
     setTimeout(() => setSubmitted(false), 5000);
   };
 
   if (submitted) {
     return (
-      <div 
+      <div
         className="p-12 bg-gentle-green/5 rounded-3xl text-center flex flex-col items-center justify-center border border-gentle-green/20 shadow-inner"
         role="alert"
         aria-live="polite"
@@ -95,7 +95,7 @@ const ContactForm: React.FC = () => {
           aria-invalid={!!errors.name}
           aria-describedby="name-error"
         />
-        {errors.name && <p id="name-error" className="mt-2 text-sm text-warm-coral flex items-center font-body"><ExclamationTriangleIcon className="w-4 h-4 mr-1"/>{errors.name}</p>}
+        {errors.name && <p id="name-error" className="mt-2 text-sm text-warm-coral flex items-center font-body"><ExclamationTriangleIcon className="w-4 h-4 mr-1" />{errors.name}</p>}
       </div>
       <div>
         <label htmlFor="email" className="block text-sm font-semibold text-primary-text font-heading mb-2 tracking-wide uppercase">{t('contact.form.emailAddress', { defaultValue: 'Email Address' })}</label>
@@ -115,7 +115,7 @@ const ContactForm: React.FC = () => {
           aria-invalid={!!errors.email}
           aria-describedby="email-error"
         />
-        {errors.email && <p id="email-error" className="mt-2 text-sm text-warm-coral flex items-center font-body"><ExclamationTriangleIcon className="w-4 h-4 mr-1"/>{errors.email}</p>}
+        {errors.email && <p id="email-error" className="mt-2 text-sm text-warm-coral flex items-center font-body"><ExclamationTriangleIcon className="w-4 h-4 mr-1" />{errors.email}</p>}
       </div>
       <div>
         <label htmlFor="message" className="block text-sm font-semibold text-primary-text font-heading mb-2 tracking-wide uppercase">{t('contact.form.messageLabel', { defaultValue: 'Message' })}</label>
@@ -134,7 +134,7 @@ const ContactForm: React.FC = () => {
           aria-invalid={!!errors.message}
           aria-describedby="message-error"
         />
-        {errors.message && <p id="message-error" className="mt-2 text-sm text-warm-coral flex items-center font-body"><ExclamationTriangleIcon className="w-4 h-4 mr-1"/>{errors.message}</p>}
+        {errors.message && <p id="message-error" className="mt-2 text-sm text-warm-coral flex items-center font-body"><ExclamationTriangleIcon className="w-4 h-4 mr-1" />{errors.message}</p>}
       </div>
       <div className="pt-4">
         <Button type="submit" variant="primary" fullWidth size="large" disabled={isSubmitting} className="shadow-lg hover:shadow-xl" tooltip={t('contact.form.submitTooltip', { defaultValue: 'Send your message to our team' })}>
