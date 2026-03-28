@@ -1,0 +1,98 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "smileQuiz": "Smile Quiz",
+    "testimonials": "Testimonials",
+    "blog": "Blog",
+    "contact": "Contact"
+  },
+  "header": {
+    "bookConsultation": "Book Consultation",
+    "call": "Call"
+  },
+  "home": {
+    "heroTitle": "Your Smile Adventure Begins Here",
+    "heroSubtitle": "Experience gentle, expert dental care in a relaxing environment.",
+    "exploreServices": "Explore Services",
+    "takeSmileQuiz": "Take the Smile Quiz",
+    "servicesTitle": "Our Dental Services",
+    "servicesSubtitle": "Comprehensive care for your entire family.",
+    "viewAllServices": "View All Services",
+    "testimonialsTitle": "Patient Stories",
+    "testimonialsSubtitle": "Hear from our happy patients.",
+    "readMoreStories": "Read More Stories",
+    "blogTitle": "Latest from the Blog",
+    "blogSubtitle": "Tips and insights for a healthier smile.",
+    "readAllArticles": "Read All Articles"
+  },
+  "services": {
+    "dental-exams": {
+      "name": "Dental Exams",
+      "shortDescription": "Comprehensive check-ups to maintain your oral health.",
+      "longDescription": "Regular dental exams are crucial for preventing and detecting problems early. We conduct thorough examinations, including checks for cavities, gum disease, and other oral health issues, to keep your smile healthy."
+    },
+    "fillings": {
+      "name": "Fillings",
+      "shortDescription": "Durable fillings to restore teeth affected by decay.",
+      "longDescription": "We use modern, tooth-colored composite materials to fill cavities, restoring the strength and appearance of your teeth. The procedure is quick, comfortable, and helps prevent further decay."
+    },
+    "crownings": {
+      "name": "Crownings",
+      "shortDescription": "Custom crowns to protect and restore damaged teeth.",
+      "longDescription": "A dental crown is a cap placed over a damaged tooth to restore its shape, size, strength, and appearance. We offer high-quality crowns that look and feel natural, protecting your tooth for years to come."
+    },
+    "bridges": {
+      "name": "Bridges",
+      "shortDescription": "Dental bridges to replace one or more missing teeth.",
+      "longDescription": "A dental bridge \"bridges\" the gap created by one or more missing teeth. It consists of two or more crowns for the teeth on either side of the gap and a false tooth/teeth in between, restoring both function and aesthetics."
+    },
+    "anterior-root-canals": {
+      "name": "Anterior Root Canals",
+      "shortDescription": "Specialized root canal treatment for front teeth.",
+      "longDescription": "We perform gentle and effective root canal therapy on anterior (front) teeth to save them from infection or decay. Our focus is on relieving pain and preserving your natural smile."
+    },
+    "tooth-extraction": {
+      "name": "Tooth Extraction",
+      "shortDescription": "Safe and comfortable tooth removal when necessary.",
+      "longDescription": "While we always aim to save natural teeth, sometimes an extraction is necessary for your overall oral health. We ensure the procedure is as comfortable and stress-free as possible."
+    },
+    "oral-implants": {
+      "name": "Oral Implants",
+      "shortDescription": "A permanent solution for replacing missing teeth.",
+      "longDescription": "Oral implants are the gold standard for replacing missing teeth. They provide a strong foundation for fixed or removable replacement teeth that are made to match your natural teeth, ensuring durability and a natural look."
+    },
+    "scaling": {
+      "name": "Scaling",
+      "shortDescription": "Professional deep cleaning to remove plaque and tartar.",
+      "longDescription": "Scaling is a deep cleaning procedure that goes below the gumline to remove built-up plaque and tartar. It's a key treatment for preventing and managing gum disease and keeping your gums healthy."
+    },
+    "dentures": {
+      "name": "Denture",
+      "shortDescription": "Custom-made dentures to restore your smile and function.",
+      "longDescription": "We provide comfortable, natural-looking full and partial dentures to replace missing teeth, helping you to eat, speak, and smile with confidence again."
+    }
+  },
+  "common": {
+    "exploreTreatment": "Explore Treatment",
+    "backToAllServices": "Back to All Services",
+    "frequentlyAskedQuestions": "Frequently Asked Questions",
+    "readyToTransform": "Ready to transform your smile?",
+    "inquireAbout": "Inquire about",
+    "relatedServices": "Related Services",
+    "readMore": "Read More",
+    "closeArticle": "Close Article",
+    "shareThisAdventure": "Share this adventure",
+    "by": "By",
+    "searchArticles": "Search articles...",
+    "noArticlesFound": "No articles found matching your search."
+  },
+  "footer": {
+    "description": "Providing gentle, expert dental care for the whole family in Kolkata.",
+    "quickLinks": "Quick Links",
+    "contactUs": "Contact Us",
+    "followUs": "Follow Us",
+    "rightsReserved": "All rights reserved."
+  }
+}
