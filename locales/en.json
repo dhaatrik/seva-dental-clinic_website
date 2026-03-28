@@ -1,0 +1,402 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "smileQuiz": "Smile Quiz",
+    "testimonials": "Testimonials",
+    "blog": "Blog",
+    "contact": "Contact"
+  },
+  "header": {
+    "bookConsultation": "Book Consultation",
+    "call": "Call"
+  },
+  "home": {
+    "heroTitle": "Your Smile Adventure Begins Here",
+    "heroSubtitle": "Experience gentle, expert dental care in a relaxing environment.",
+    "exploreServices": "Explore Services",
+    "takeSmileQuiz": "Take the Smile Quiz",
+    "servicesTitle": "Our Dental Services",
+    "servicesSubtitle": "Comprehensive care for your entire family.",
+    "viewAllServices": "View All Services",
+    "testimonialsTitle": "Patient Stories",
+    "testimonialsSubtitle": "Hear from our happy patients.",
+    "readMoreStories": "Read More Stories",
+    "blogTitle": "Latest from the Blog",
+    "blogSubtitle": "Tips and insights for a healthier smile.",
+    "readAllArticles": "Read All Articles",
+    "dragToCompare": "Drag to compare before and after",
+    "before": "Before",
+    "after": "After",
+    "stateOfArtTitle": "State-of-the-Art Technology",
+    "stateOfArtSubtitle": "We utilize the latest in dental technology to ensure your treatments are precise, comfortable, and efficient.",
+    "transformationsTitle": "Transformations",
+    "transformationsSubtitle": "See the difference our expert care can make.",
+    "discoverSmileScore": "Discover Your Smile Score!",
+    "smileScoreSubtitle": "Embark on our interactive \"Smile Score Challenge\" to uncover insights into your oral health habits and receive personalized guidance for your unique smile journey.",
+    "takeQuizTooltip": "Start your smile score challenge",
+    "takeQuizNow": "Take the Quiz Now",
+    "readMoreStoriesTooltip": "Read more real patient stories"
+  },
+  "services": {
+    "dental-exams": {
+      "name": "Dental Exams",
+      "shortDescription": "Comprehensive check-ups to maintain your oral health.",
+      "longDescription": "Regular dental exams are crucial for preventing and detecting problems early. We conduct thorough examinations, including checks for cavities, gum disease, and other oral health issues, to keep your smile healthy.",
+      "faqs": [
+        {
+          "question": "How often should I get a dental exam?",
+          "answer": "For most people, a dental exam every six months is recommended to maintain optimal oral health."
+        },
+        {
+          "question": "What happens during a dental exam?",
+          "answer": "During an exam, we will clean your teeth and check for any signs of cavities, gum disease, oral cancer, and other potential issues."
+        }
+      ]
+    },
+    "fillings": {
+      "name": "Fillings",
+      "shortDescription": "Durable fillings to restore teeth affected by decay.",
+      "longDescription": "We use modern, tooth-colored composite materials to fill cavities, restoring the strength and appearance of your teeth. The procedure is quick, comfortable, and helps prevent further decay."
+    },
+    "crownings": {
+      "name": "Crownings",
+      "shortDescription": "Custom crowns to protect and restore damaged teeth.",
+      "longDescription": "A dental crown is a cap placed over a damaged tooth to restore its shape, size, strength, and appearance. We offer high-quality crowns that look and feel natural, protecting your tooth for years to come."
+    },
+    "bridges": {
+      "name": "Bridges",
+      "shortDescription": "Dental bridges to replace one or more missing teeth.",
+      "longDescription": "A dental bridge \"bridges\" the gap created by one or more missing teeth. It consists of two or more crowns for the teeth on either side of the gap and a false tooth/teeth in between, restoring both function and aesthetics."
+    },
+    "anterior-root-canals": {
+      "name": "Anterior Root Canals",
+      "shortDescription": "Specialized root canal treatment for front teeth.",
+      "longDescription": "We perform gentle and effective root canal therapy on anterior (front) teeth to save them from infection or decay. Our focus is on relieving pain and preserving your natural smile.",
+      "faqs": [
+        {
+          "question": "Is a root canal painful?",
+          "answer": "With modern techniques and anesthesia, the procedure is typically comfortable and relieves the pain of an infected tooth."
+        },
+        {
+          "question": "Why save the tooth?",
+          "answer": "Saving your natural tooth is always the best option, preventing issues like shifting teeth and bone loss."
+        }
+      ]
+    },
+    "tooth-extraction": {
+      "name": "Tooth Extraction",
+      "shortDescription": "Safe and comfortable tooth removal when necessary.",
+      "longDescription": "While we always aim to save natural teeth, sometimes an extraction is necessary for your overall oral health. We ensure the procedure is as comfortable and stress-free as possible."
+    },
+    "oral-implants": {
+      "name": "Oral Implants",
+      "shortDescription": "A permanent solution for replacing missing teeth.",
+      "longDescription": "Oral implants are the gold standard for replacing missing teeth. They provide a strong foundation for fixed or removable replacement teeth that are made to match your natural teeth, ensuring durability and a natural look.",
+      "faqs": [
+        {
+          "question": "How long do implants last?",
+          "answer": "With proper care and good oral hygiene, dental implants can last a lifetime."
+        },
+        {
+          "question": "Am I a candidate for implants?",
+          "answer": "Most people in good general and oral health are excellent candidates for dental implants."
+        }
+      ]
+    },
+    "scaling": {
+      "name": "Scaling",
+      "shortDescription": "Professional deep cleaning to remove plaque and tartar.",
+      "longDescription": "Scaling is a deep cleaning procedure that goes below the gumline to remove built-up plaque and tartar. It's a key treatment for preventing and managing gum disease and keeping your gums healthy."
+    },
+    "dentures": {
+      "name": "Denture",
+      "shortDescription": "Custom-made dentures to restore your smile and function.",
+      "longDescription": "We provide comfortable, natural-looking full and partial dentures to replace missing teeth, helping you to eat, speak, and smile with confidence again."
+    }
+  },
+  "common": {
+    "exploreTreatment": "Explore Treatment",
+    "backToAllServices": "Back to All Services",
+    "frequentlyAskedQuestions": "Frequently Asked Questions",
+    "readyToTransform": "Ready to transform your smile?",
+    "inquireAbout": "Inquire about",
+    "relatedServices": "Related Services",
+    "readMore": "Read More",
+    "closeArticle": "Close Article",
+    "shareThisAdventure": "Share this adventure",
+    "by": "By",
+    "searchArticles": "Search articles...",
+    "noArticlesFound": "No articles found matching your search.",
+    "toggleAnswer": "Toggle answer",
+    "closeModal": "Close modal",
+    "loading": "Loading..."
+  },
+  "footer": {
+    "description": "Providing gentle, expert dental care for the whole family in Kolkata.",
+    "quickLinks": "Quick Links",
+    "contactUs": "Contact Us",
+    "followUs": "Follow Us",
+    "rightsReserved": "All rights reserved.",
+    "yourSmileAdventure": "Your Smile Adventure",
+    "embarkJourney": "Embark on a journey to lifelong oral health with us. We're dedicated to making your dental experience positive and reassuring.",
+    "discoverSmileScore": "Discover your smile score now!",
+    "takeSmileQuiz": "Take the Smile Score Quiz!",
+    "joinAdventure": "Join the Adventure",
+    "emailPlaceholder": "Your email address",
+    "subscribe": "Subscribe",
+    "subscribeSuccess": "Thanks for joining our newsletter!"
+  },
+  "hero": {
+    "titleLine1": "Your Smile Adventure",
+    "titleLine2": "Begins Here.",
+    "subtitle": "Welcome to Seva Dental Clinic. Experience world-class dental care in a serene, spa-like environment designed for your comfort and confidence.",
+    "bookConsultationTooltip": "Book your consultation today",
+    "bookConsultation": "Book Consultation",
+    "takeQuizTooltip": "Discover your smile score",
+    "takeQuiz": "Take the Smile Quiz"
+  },
+  "about": {
+    "title": "About Seva Dental Clinic",
+    "subtitle": "\"Your Smile Adventure Begins Here.\" This is more than a tagline for us; it's our guiding philosophy.",
+    "doctorTitle": "Meet Dr. Krishnendu Bhattacharya",
+    "doctorP1": "Dr. Krishnendu Bhattacharya is a dedicated and compassionate dentist with a passion for creating beautiful, healthy smiles. With years of experience in various dental disciplines, Dr. Bhattacharya believes in a patient-centric approach, taking the time to understand each individual's needs and concerns.",
+    "doctorP2": "His qualifications include [Placeholder for Qualifications, e.g., BDS, MDS in a specialty]. He is committed to continuous learning and stays updated with the latest advancements in dental technology and techniques to provide the best possible care.",
+    "doctorP3": "Dr. Bhattacharya's patient care philosophy revolves around trust, comfort, and education. He strives to demystify dental procedures, alleviate anxiety, and empower patients to take an active role in their oral health journey. He is particularly skilled in [Placeholder for skills, e.g., cosmetic dentistry, pediatric care, painless procedures].",
+    "clinicTitle": "Our Clinic Environment",
+    "clinicSubtitle": "Experience a sanctuary of dental wellness. Our clinic is a thoughtfully designed, serene space where your comfort is our priority. Combining a calming atmosphere with cutting-edge technology, we ensure every visit is relaxing, efficient, and focused on delivering the highest standard of care.",
+    "clinicFooter": "From our reception area to our treatment rooms, every detail is considered to make your visit pleasant. We adhere to the highest standards of hygiene and safety.",
+    "purposeTitle": "Our Core Purpose",
+    "purposeText": "To establish Seva Dental Clinic as the most trusted and patient-centric dental practice in the Dum Dum, Kolkata area. Our website serves as the primary digital touchpoint, designed not just to inform, but to build relationships, alleviate dental anxiety, and make the process of seeking dental care a reassuring and positive experience for everyone.",
+    "purposeTooltip": "Our core purpose"
+  },
+  "contact": {
+    "title": "Contact Us & Book Your Adventure",
+    "subtitle": "We're here to help you on your journey to a healthier smile. Reach out to us with any questions or to schedule your appointment.",
+    "getInTouch": "Get in Touch",
+    "visitClinic": "Visit our clinic",
+    "clinicAddress": "Clinic Address:",
+    "callUsTooltip": "Call us",
+    "phone": "Phone:",
+    "clickableMobile": "(Clickable on mobile devices)",
+    "emailUsTooltip": "Email us",
+    "email": "Email:",
+    "openingHours": "Clinic Opening Hours:",
+    "sendMessage": "Send Us a Message",
+    "findUs": "Find Us Here",
+    "mapError": "Google Maps cannot be displayed.",
+    "mapApiKeyMissing": "(API key may be missing or invalid).",
+    "ourAddressIs": "Our address is:",
+    "mapNote": "Note: Map functionality requires a Google Maps API Key to be configured.",
+    "form": {
+      "nameRequired": "Name is required.",
+      "emailRequired": "Email is required.",
+      "emailInvalid": "Email address is invalid.",
+      "messageRequired": "Message is required.",
+      "thankYou": "Thank You!",
+      "successMessage": "Your message has been sent. We'll get back to you shortly.",
+      "fullName": "Full Name",
+      "emailAddress": "Email Address",
+      "messageLabel": "Message",
+      "submitTooltip": "Send your message to our team",
+      "submitButton": "Send Message"
+    }
+  },
+  "testimonials": {
+    "title": "Patient Stories",
+    "subtitle": "Hear from fellow explorers on their \"Smile Adventure\" with Seva Dental Clinic.",
+    "shareTitle": "Share Your Story!",
+    "shareSubtitle": "Had a great experience with us? We'd love to hear about your smile adventure! Your story can inspire others.",
+    "shareTooltip": "Tell us about your smile adventure",
+    "contactToShare": "Contact Us to Share",
+    "verifiedPatient": "Verified Patient"
+  },
+  "servicesPage": {
+    "title": "Our Dental Services",
+    "subtitle": "Explore our comprehensive range of dental services designed to meet all your oral health needs on your \"Smile Adventure\".",
+    "readyTitle": "Ready to Start Your Adventure?",
+    "readySubtitle": "Whether you need a routine check-up, cosmetic enhancement, or restorative care, our team is here to provide expert and compassionate service.",
+    "callUsTooltip": "Call our clinic directly",
+    "callUs": "Call Us",
+    "bookAppointmentTooltip": "Schedule your visit online",
+    "bookAppointment": "Book Appointment"
+  },
+  "notFound": {
+    "title": "Oops! Page Not Found",
+    "subtitle": "It seems the page you're looking for on your \"Smile Adventure\" has taken a detour. Don't worry, we can get you back on track!",
+    "returnHomeTooltip": "Go back to the homepage",
+    "returnHome": "Return to Home"
+  },
+  "chatbot": {
+    "initialMessage": "Hello! I'm the Smile Guide. How can I help you on your adventure today?",
+    "closeChat": "Close Chat",
+    "openChat": "Chat with Smile Guide",
+    "openChatAria": "Open Smile Guide chat",
+    "title": "Smile Guide",
+    "status": "Online & ready to help",
+    "placeholder": "Type your message...",
+    "inputAria": "Chat input",
+    "sendTooltip": "Send message",
+    "sendAria": "Send message"
+  },
+  "blog": {
+    "title": "The Explorer's Guide",
+    "subtitle": "Navigate your path to optimal oral health with insights, tips, and articles from our dental experts.",
+    "searchPlaceholder": "Search articles...",
+    "noArticlesFound": "No articles found matching your search.",
+    "by": "By",
+    "shareThisAdventure": "Share this adventure",
+    "shareOnX": "Share on X",
+    "shareOnFacebook": "Share on Facebook",
+    "shareOnLinkedIn": "Share on LinkedIn",
+    "closeArticleTooltip": "Close article",
+    "closeArticle": "Close Article",
+    "shareSuccess": "Sharing initiated successfully!",
+    "author": "Author",
+    "readArticle": "Read Article",
+    "shareInitiated": "Sharing initiated!"
+  },
+  "testimonialsData": {
+    "priya-s": {
+      "name": "Priya S.",
+      "quote": "I used to be so anxious about dental visits, but Seva Dental Clinic changed that for me. The team is so gentle and understanding. My 'Smile Adventure' has truly begun!"
+    },
+    "amit-k": {
+      "name": "Amit K.",
+      "quote": "As a busy professional, I appreciate the efficiency and clarity at Seva Dental. Booking was easy, and Dr. Bhattacharya explained everything about my implant procedure clearly. Highly recommend!"
+    },
+    "sunita-m": {
+      "name": "Sunita M.",
+      "quote": "Finding a family dentist we trust was important. Seva Dental is fantastic with my kids. They actually look forward to their check-ups now!"
+    },
+    "mr-bose": {
+      "name": "Mr. Bose",
+      "quote": "The information on dentures was very clear on their website, and the staff were very helpful in person. My new dentures fit perfectly. Thank you, Seva Dental Clinic."
+    }
+  },
+  "blogPostsData": {
+    "root-canals-myths": {
+      "title": "Root Canal Treatment: 5 Common Myths Debunked by Experts",
+      "excerpt": "Root canals have a scary reputation, but modern dentistry has made them a much more comfortable experience. Learn the truth about root canal therapy in Kolkata.",
+      "content": "Myth 1: Root canals are extremely painful. Reality: With modern anesthesia and techniques, root canals are generally no more uncomfortable than getting a filling. The procedure actually relieves pain caused by infection. \n\nMyth 2: It’s better to pull a tooth than get a root canal. Reality: Saving your natural tooth is almost always the best option. Root canals preserve your tooth and prevent issues that can arise from missing teeth, like shifting of adjacent teeth or bone loss. \n\nMyth 3: Root canals cause illness. Reality: This is a debunked theory. There is no scientific evidence linking root canals to diseases elsewhere in the body. \n\nMyth 4: The benefits of a root canal are temporary. Reality: A successfully treated and restored tooth can last a lifetime with good oral hygiene. \n\nMyth 5: You only need a root canal if you have pain. Reality: Sometimes, an infected tooth may not cause pain, especially in the early stages. \n\n**The Procedure Explained:** \nYour \"Root Canal Adventure\" begins with thorough numbing of the area. We then create a small opening to access the infected pulp, clean the canals meticulously using specialized tools, and seal them with a biocompatible material. Finally, a crown is usually placed to restore the tooth's strength. \n\n**Post-Treatment Care:** \nAfter your treatment, avoid chewing on the treated tooth until it's fully restored with a crown. You might experience some mild sensitivity for a few days, which can be managed with over-the-counter pain relief. Stick to soft foods like yogurt, mashed potatoes, or soup for the first 24 hours to ensure a smooth recovery."
+    },
+    "childs-first-visit": {
+      "title": "Your Child's First Dental Visit: A Stress-Free Guide for Parents",
+      "excerpt": "A child's first dental visit is an important milestone. Discover how to make pediatric dentistry a positive experience for your little one.",
+      "content": "When to go: The American Academy of Pediatric Dentistry recommends the first visit by age 1 or within six months of the first tooth erupting. \n\nWhat to expect: The first visit is often short and informal. It’s mainly for your child to meet the dentist and get comfortable in the dental environment. The dentist might check your child’s existing teeth for decay, look at their bite, and check for any potential problems with the gums, jaw, and oral tissues. \n\n**Tips for a Fun \"Smile Adventure\":** \n1. **Role-Play at Home:** Use a stuffed animal to \"play dentist.\" Let your child be the dentist and \"count\" the animal's teeth. \n2. **The \"Tooth Fairy\" Connection:** Frame the visit as a way to keep their teeth strong for the Tooth Fairy's collection! \n3. **Counting Teeth:** During the visit, we'll \"count\" their teeth together. It's a simple way to engage them without any pressure. \n4. **Small Rewards:** A sticker or a \"bravery badge\" after the visit can go a long way in creating a positive association. \n5. **Keep it Positive:** Avoid using words like \"pain,\" \"needle,\" or \"drill.\" Instead, talk about \"sparkly teeth\" and \"friendly tooth-helpers.\""
+    },
+    "choosing-toothbrush": {
+      "title": "Choosing the Best Toothbrush: Manual vs. Electric – Which is Better?",
+      "excerpt": "With so many options, how do you pick the best toothbrush for your oral hygiene? We compare manual and electric toothbrushes to help you decide.",
+      "content": "Choosing the right tool for your \"Smile Adventure\" is essential. Here's a breakdown of the two main contenders: \n\n**Manual Toothbrushes:** \n*   **Pros:** Inexpensive, highly portable, and widely available. You have complete control over the pressure. \n*   **Cons:** Requires more manual dexterity and effort to clean effectively. It's easy to brush too hard or not long enough. \n\n**Electric Toothbrushes:** \n*   **Pros:** Often feature built-in timers to ensure you brush for the full two minutes. Many have pressure sensors that alert you if you're pressing too hard. The oscillating or sonic vibrations do much of the work for you, often leading to better plaque removal. \n*   **Cons:** More expensive upfront, requires charging or batteries, and can be bulkier for travel. \n\n**Our Recommendation:** \nBoth can be effective if used correctly. However, if you struggle with brushing for the full two minutes or tend to brush too aggressively, an electric toothbrush might be your best ally. Look for the ADA Seal of Acceptance on whichever you choose!"
+    },
+    "importance-of-scaling": {
+      "title": "Why Professional Dental Scaling is Essential for Healthy Gums",
+      "excerpt": "Professional scaling and cleaning remove stubborn tartar that regular brushing can't reach. Learn why it's vital for preventing gum disease.",
+      "content": "Scaling is like a \"deep clean\" for your teeth's foundation. Even with perfect brushing, plaque can harden into tartar (calculus), which only a dental professional can remove. \n\n**The Long-Term Consequences of Neglect:** \nIgnoring the need for scaling can lead to gingivitis (inflamed gums) and eventually periodontitis. This isn't just about your mouth; untreated gum disease has serious long-term consequences: \n1. **Bone Loss:** Chronic infection can destroy the bone that supports your teeth, leading to tooth loss. \n2. **Systemic Health Links:** Research has linked gum disease to more serious conditions like heart disease, diabetes, and even respiratory issues. \n3. **Gum Recession:** As the infection progresses, your gums may pull away from your teeth, exposing sensitive roots. \n\n**The Solution:** \nRegular scaling every six months prevents these issues by removing the bacteria-laden tartar before it can cause lasting damage. It's a simple investment in your overall health!"
+    },
+    "dental-implants-benefits": {
+      "title": "Benefits of Dental Implants: The Permanent Solution for Missing Teeth",
+      "excerpt": "Missing a tooth? Dental implants offer a natural-looking, durable, and permanent replacement. Discover the advantages of oral implants.",
+      "content": "Dental implants are the \"gold standard\" for tooth replacement. They are small titanium posts that act as artificial tooth roots, providing a stable foundation for a custom-made crown. \n\n**Why Choose Implants?** \n1. **Natural Look and Feel:** They are designed to match your natural teeth perfectly, so you can smile with confidence. \n2. **Improved Quality of Life:** Unlike dentures, implants don't slip or click. You can eat your favorite foods—like crunchy apples or corn on the cob—without worry. \n3. **Preserves Facial Structure:** Implants stimulate the jawbone, preventing the \"sunken\" look that can occur after tooth loss. \n4. **Durability:** With proper care, implants can last a lifetime, making them a cost-effective long-term solution. \n\n**The Process:** \nIt's a multi-step journey that involves placing the implant, allowing it to fuse with the bone (osseointegration), and finally attaching the custom crown. While it takes time, the results are truly life-changing!"
+    },
+    "teeth-whitening-tips": {
+      "title": "10 Simple Tips for a Brighter, Whiter Smile at Home",
+      "excerpt": "Want a sparkling smile? Follow these easy oral hygiene tips and lifestyle changes to maintain white teeth and prevent staining.",
+      "content": "Maintaining a bright smile is a daily adventure! Here are 10 practical tips: \n\n1. **Brush Twice Daily:** Use fluoride toothpaste and brush for at least two minutes. Set a timer! \n2. **Floss Daily:** Plaque between teeth can make your smile look dull. \n3. **Limit Staining Foods:** Be mindful of coffee, tea, red wine, and dark berries. \n4. **Drink Through a Straw:** This helps bypass your front teeth when drinking staining liquids. \n5. **Quit Smoking:** Tobacco is a major cause of deep yellow staining. \n6. **Rinse After Eating:** A quick water rinse after meals helps wash away pigments. \n7. **Eat Crunchy Fruits and Veggies:** Apples, carrots, and celery act as natural \"scrubbers.\" \n8. **Use Whitening Toothpaste:** These can help remove surface-level stains. \n9. **Stay Hydrated:** Water stimulates saliva, which naturally cleanses your mouth. \n10. **Regular Check-ups:** Professional cleanings at Seva Dental Clinic are the ultimate way to keep your smile truly sparkling! We can remove deep-set stains that home care can't reach."
+    }
+  },
+  "quiz": {
+    "noFeedback": "No specific feedback provided.",
+    "errorLoadingTips": "Could not load personalized tips due to an error.",
+    "completedTitle": "Quiz Completed!",
+    "yourScore": "Your Smile Score:",
+    "tipsTitle": "Tips for your adventure",
+    "consultingGuide": "Consulting your Smile Guide...",
+    "personalizedForYou": "Personalized for You:",
+    "breakdownTitle": "Adventure Breakdown",
+    "questAccepted": "\"Quest Accepted! Your Smile Adventure continues.\"",
+    "retakeTooltip": "Start the quiz from the beginning",
+    "retakeQuiz": "Retake Quiz",
+    "bookTooltip": "Book your consultation based on your results",
+    "bookAppointment": "Book an Appointment",
+    "challengeTitle": "Smile Score Challenge",
+    "challengeSubtitle": "Answer these questions to discover your Smile Explorer Rank!",
+    "progress": "Progress",
+    "previousTooltip": "Go back to the previous question",
+    "previous": "Previous",
+    "nextTooltip": "Proceed to the next question",
+    "next": "Next",
+    "finishTooltip": "Calculate your smile score",
+    "finishQuiz": "Finish Quiz",
+    "questions": {
+      "1": {
+        "text": "How often do you typically brush your teeth?",
+        "options": {
+          "0": { "text": "Twice a day, or more!", "feedback": "Excellent habit!" },
+          "1": { "text": "Once a day", "feedback": "Good start, aiming for twice is even better!" },
+          "2": { "text": "Less than once a day", "feedback": "Brushing regularly is key to a healthy smile." }
+        }
+      },
+      "2": {
+        "text": "How often do you floss?",
+        "options": {
+          "0": { "text": "Daily", "feedback": "Fantastic! Flossing is crucial." },
+          "1": { "text": "A few times a week", "feedback": "Great effort! Daily flossing makes a big difference." },
+          "2": { "text": "Rarely or never", "feedback": "Flossing helps prevent cavities and gum disease. We can show you easy ways!" }
+        }
+      },
+      "3": {
+        "text": "What's your go-to drink during the day (besides water)?",
+        "options": {
+          "0": { "text": "Mainly water, sometimes unsweetened tea/coffee", "feedback": "Smart choices for your teeth!" },
+          "1": { "text": "Juices or milk", "feedback": "These can have natural sugars; moderation is good." },
+          "2": { "text": "Sugary sodas, energy drinks, or sweetened coffee/tea", "feedback": "Frequent sugary drinks can increase cavity risk." }
+        }
+      },
+      "4": {
+        "text": "Do your gums ever bleed when you brush or floss?",
+        "options": {
+          "0": { "text": "Never", "feedback": "Healthy gums are happy gums!" },
+          "1": { "text": "Sometimes", "feedback": "Occasional bleeding can be a sign to check in with us." },
+          "2": { "text": "Often", "feedback": "Frequent bleeding is a sign your gums need attention. We can help!" }
+        }
+      },
+      "5": {
+        "text": "How long has it been since your last dental check-up?",
+        "options": {
+          "0": { "text": "Within the last 6-12 months", "feedback": "Great job staying on top of your check-ups!" },
+          "1": { "text": "More than a year ago", "feedback": "Regular check-ups are important. It might be time to book!" },
+          "2": { "text": "I can't remember / It's been several years", "feedback": "It's never too late to start your smile adventure! We're here to help." }
+        }
+      }
+    },
+    "ranks": {
+      "Novice Navigator": {
+        "genericTips": {
+          "0": "Great start on your adventure! Every step counts.",
+          "1": "Focusing a bit more on daily flossing can make a huge difference. We can show you the easiest way!",
+          "2": "Try to brush for a full two minutes, twice a day.",
+          "3": "Consider swapping one sugary drink a day for water."
+        }
+      },
+      "Adept Adventurer": {
+        "genericTips": {
+          "0": "You're well on your way to a super smile!",
+          "1": "Keep up the good work with brushing and flossing.",
+          "2": "Remember regular check-ups to maintain your great progress.",
+          "3": "Explore sugar-free alternatives for snacks and drinks."
+        }
+      },
+      "Guardian of the Gums": {
+        "genericTips": {
+          "0": "You're a true Guardian of the Gums! Fantastic work!",
+          "1": "Your habits are setting you up for lifelong oral health.",
+          "2": "For your next challenge, consider a professional polish to make your smile truly sparkle.",
+          "3": "Share your smile secrets with friends and family!"
+        }
+      }
+    }
+  }
+}
