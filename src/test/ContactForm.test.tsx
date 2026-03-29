@@ -1,4 +1,4 @@
-import { render, screen, fireEvent, waitFor, act } from '@testing-library/react';
+import { render, screen, fireEvent, act } from '@testing-library/react';
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 import ContactForm from '../../components/ContactForm';
 import React from 'react';
@@ -16,6 +16,9 @@ describe('ContactForm Component', () => {
   });
 
   afterEach(() => {
+    // 1. Clean up lingering timers (Fixes potential memory leaks and state updates on unmounted components)
+    // In ContactForm.tsx, a success message disappears after 5 seconds via setTimeout(() => setSubmitted(false), 5000).
+    vi.clearAllTimers();
     vi.useRealTimers();
   });
 
@@ -36,7 +39,6 @@ describe('ContactForm Component', () => {
     const emailInput = screen.getByLabelText(/email address/i);
     fireEvent.change(emailInput, { target: { value: 'invalid-email' } });
     
-    // Validation triggers on change in this component
     expect(screen.getByText('Email address is invalid.')).toBeInTheDocument();
   });
 
@@ -49,15 +51,13 @@ describe('ContactForm Component', () => {
     
     const submitButton = screen.getByRole('button', { name: /send message/i });
     
-    // Use act for the event that triggers state updates
+    // We wrap the submission trigger in act because it leads to state updates
     await act(async () => {
       fireEvent.click(submitButton);
     });
 
-    // Submit button should be disabled preventing double submissions
+    // Check loading state immediately
     expect(submitButton).toBeDisabled();
-    
-    // LoadingSpinner should appear (identified by role status and sr-only text)
     expect(screen.getByRole('status')).toBeInTheDocument();
     expect(screen.getByText('Loading...')).toBeInTheDocument();
   });
