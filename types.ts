@@ -5,6 +5,7 @@ export interface Service {
   name: string;
   shortDescription: string;
   longDescription: string;
+  category?: string;
   icon: React.FC<React.SVGProps<SVGSVGElement>>;
   faqs?: { question: string; answer: string }[];
   image?: string;
@@ -28,6 +29,7 @@ export interface BlogPost {
   excerpt: string;
   content: string; // Can be simple text or basic HTML markup
   image?: string;
+  category?: string;
   metaDescription?: string;
   keywords?: string[];
 }

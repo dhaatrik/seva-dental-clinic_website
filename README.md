@@ -1,6 +1,10 @@
-# 🦷 Seva Dental Clinic — Your Smile Adventure
+# 🦷 Seva Dental Clinic Website — Your Smile Adventure
 
-Welcome to **Seva Dental Clinic**, a modern, patient-centric web application designed to transform dental care into a positive, empowering "Smile Adventure." Built with cutting-edge web technologies and integrated with Google's Gemini AI, this platform demystifies oral health through interactive experiences and personalized guidance.
+Welcome to the **Seva Dental Clinic Website**, a modern, interactive, and patient-centric web application designed to transform routine dental care into an engaging "Smile Adventure." 
+
+This project aims to solve the common problem of dental anxiety and lack of patient engagement by providing an intuitive digital storefront for a dental clinic. It leverages interactive features, personalized AI-driven guidance, and a premium aesthetic to build trust, educate patients, and simplify the appointment booking process. 
+
+**Why these technologies?** React 19 and Vite were chosen for their unparalleled performance and developer experience. Tailwind CSS allows for rapid, custom UI development that feels premium without the bloat of traditional CSS frameworks. Framer Motion and Lenis provide the cinematic, smooth scrolling and animations that elevate the user experience. Finally, the integration of Google's Gemini AI transforms a static brochure site into an intelligent platform that dynamically interacts with the user.
 
 [![MIT License](https://img.shields.io/badge/License-MIT-forestgreen.svg)](https://opensource.org/licenses/MIT)
 [![React](https://img.shields.io/badge/React-19.1-blue.svg)](https://react.dev/)
@@ -12,139 +16,159 @@ Welcome to **Seva Dental Clinic**, a modern, patient-centric web application des
 ## 📖 Table of Contents
 
 - [✨ Key Features](#-key-features)
-- [🛠️ Tech Stack](#️-tech-stack)
-- [🚀 Getting Started](#-getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-  - [Environment Configuration](#environment-configuration)
-- [📁 Project Structure](#-project-structure)
-- [🎨 Customization & Branding](#-customization--branding)
-- [🤝 Contributing](#-contributing)
-- [📄 License](#-license)
+- [🛠️ Technologies Used](#️-technologies-used)
+- [🚀 Installation & Requirements](#-installation--requirements)
+- [💡 Usage Instructions & Customization](#-usage-instructions--customization)
+- [🧪 Testing Instructions](#-testing-instructions)
+- [🤝 Contribution Guidelines](#-contribution-guidelines)
+- [📄 License Information](#-license-information)
+- [👨‍💻 Author](#-author)
 
 ---
 
 ## ✨ Key Features
 
-- **🤖 AI-Powered Smile Quiz**: An interactive "Smile Score Challenge" that uses **Google Gemini AI** to analyze oral health habits and provide personalized, encouraging tips.
-- **💬 Smile Guide Chatbot**: A friendly AI assistant integrated with the clinic's service data to answer patient inquiries in real-time.
-- **🌍 Multi-Language Support**: Seamlessly switch between **English, Hindi, and Bengali** to cater to a diverse patient base.
-- **🎨 Premium UX/UI**: 
-  - **Smooth Scrolling**: Powered by `Lenis` for a cinematic feel.
-  - **Fluid Animations**: High-performance transitions using `Framer Motion`.
-  - **Custom Cursor & Noise Overlay**: Subtle design touches for a modern, tactile interface.
-- **📱 Fully Responsive**: Optimized for every device, from mobile to ultra-wide desktops.
-- **🏥 Comprehensive Service Pages**: Detailed information on treatments from routine check-ups to advanced implants.
+- **🤖 AI-Powered Smile Quiz**: An interactive "Smile Score Challenge" using the Gemini AI model to analyze habits and provide personalized oral health tips.
+- **💬 Smile Guide Chatbot**: A friendly AI assistant integrated with clinic data to answer patient inquiries in real-time.
+- **🌍 Multi-Language Support**: Seamlessly switch between English, Hindi, and Bengali (i18next).
+- **🎨 Premium UX/UI**: Smooth scrolling (Lenis), fluid animations (Framer Motion), and custom cursors for a tactile interface.
+- **📱 Fully Responsive**: Optimized across all devices.
 
 ---
 
-## 🛠️ Tech Stack
+## 🛠️ Technologies Used
 
-### Frontend
-- **Framework**: [React 19](https://react.dev/)
+### Core Stack
+- **Frontend Framework**: [React 19](https://react.dev/)
 - **Build Tool**: [Vite](https://vitejs.dev/)
 - **Routing**: [React Router 7](https://reactrouter.com/)
-- **State & Logic**: Functional components with Hooks
 
 ### Styling & Animation
-- **Styling**: [Tailwind CSS](https://tailwindcss.com/) (Custom palette: Forest Green, Champagne Gold, Soft Beige)
+- **CSS Framework**: [Tailwind CSS](https://tailwindcss.com/)
 - **Animations**: [Framer Motion](https://www.framer.com/motion/)
-- **Smooth Scroll**: [Lenis](https://lenis.darkroom.engineering/)
+- **Smooth Scrolling**: [Lenis](https://lenis.darkroom.engineering/)
 - **Icons**: [Lucide React](https://lucide.dev/) & [Heroicons](https://heroicons.com/)
 
-### Artificial Intelligence
-- **LLM**: [Google Gemini 1.5 Flash](https://ai.google.dev/) via `@google/genai` SDK
-
-### Utilities
+### AI & Utilities
+- **AI Integration**: [Google Gemini AI](https://ai.google.dev/) via `@google/genai`
 - **Internationalization**: [i18next](https://www.i18next.com/)
-- **SEO**: [React Helmet Async](https://github.com/staylor/react-helmet-async)
+- **Testing Engine**: [Vitest](https://vitest.dev/)
 
 ---
 
-## 🚀 Getting Started
+## 🚀 Installation & Requirements
+
+To get the project running locally on your machine, follow these simple steps.
 
 ### Prerequisites
 - **Node.js**: v18.0.0 or higher
 - **npm** or **yarn**
-- **Google AI Studio API Key**: Required for AI features (Quiz & Chatbot)
+- **API Key**: A Gemini API key is required for the AI Quiz and Chatbot features.
 
-### Installation
+### Step-by-Step Installation
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/DhaatuTheGamer/seva-dental-clinic_website.git
+   git clone https://github.com/dhaatrik/seva-dental-clinic_website.git
    cd seva-dental-clinic_website
    ```
 
-2. **Install dependencies:**
+2. **Install all dependencies:**
    ```bash
    npm install
    ```
 
-3. **Start the development server:**
+3. **Environment Configuration:**
+   Create a `.env` file in the root directory and add your required API keys:
+   ```env
+   # Required for Quiz & Chatbot
+   GEMINI_API_KEY=your_gemini_api_key_here
+   
+   # Optional: Google Maps API Key for the Contact page
+   GOOGLE_MAPS_API_KEY=your_google_maps_key_here
+   ```
+
+4. **Start the development server:**
    ```bash
    npm run dev
    ```
+   Navigate to `http://localhost:3000` in your browser.
 
-### Environment Configuration
+---
 
-Create a `.env` file in the root directory and add your API keys:
+## 💡 Usage Instructions & Customization
 
-```env
-# Google Gemini API Key
-API_KEY=your_gemini_api_key_here
+The application is designed to be highly customizable for different clinics or personal branding. 
 
-# Google Maps API Key (Optional, for Contact page)
-GOOGLE_MAPS_API_KEY=your_google_maps_key_here
+### Customizing Clinic Data
+You can modify the core textual data, services, and quiz questions by editing the `constants.ts` file. 
+
+```typescript
+// Example from constants.ts
+export const CLINIC_NAME = "Seva Dental Clinic";
+export const PHONE_NUMBER = "+91 98765 43210";
+```
+
+### Modifying the Branding Theme
+Visual identity colors are defined directly inside `index.html` within the Tailwind configuration script. To swap out the primary palette, edit the `theme.extend.colors` object:
+
+```html
+<!-- Example from index.html -->
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          'gentle-green': '#1A362D', /* Primary */
+          'warm-coral': '#D4AF37',   /* Accent */
+          'calm-blue': '#F0EBE1',    /* Background */
+        }
+      }
+    }
+  }
+</script>
 ```
 
 ---
 
-## 📁 Project Structure
+## 🧪 Testing Instructions
 
-```text
-.
-├── components/          # 🧩 Reusable UI components (Buttons, Cards, AI Chat)
-├── locales/             # 🌐 Translation files (en.json, hi.json, bn.json)
-├── pages/               # 📄 Application views (Home, Quiz, Services, etc.)
-├── services/            # 🔌 External API integrations (Gemini SDK)
-├── constants.ts         # 📝 Centralized data (Clinic info, Quiz questions)
-├── types.ts             # 🏷️ TypeScript interfaces and enums
-├── App.tsx              # 🚦 Root component & Navigation setup
-├── index.html           # 🌐 HTML entry point & Tailwind configuration
-└── index.tsx            # 🚀 React entry point
+This project includes an automated test suite powered by **Vitest** and **React Testing Library** to ensure component reliability and code quality. 
+
+To run the complete test suite locally:
+```bash
+npm run test
 ```
 
----
-
-## 🎨 Customization & Branding
-
-### Update Clinic Information
-Modify `constants.ts` to update clinic name, contact details, opening hours, and service descriptions.
-
-### Branding & Colors
-The visual identity is defined in the `tailwind.config` section of `index.html`. You can easily swap the primary palette:
-- `gentle-green`: `#1A362D` (Primary brand color)
-- `warm-coral`: `#D4AF37` (Accent gold)
-- `calm-blue`: `#F0EBE1` (Soft background)
+This will spin up Vitest in the terminal, execute the 26+ component and page integration tests, and output a detailed pass/fail report. Keeping tests passing is essential when submitting pull requests!
 
 ---
 
-## 🤝 Contributing
+## 🤝 Contribution Guidelines
 
-We welcome contributions from the community! To contribute:
+We warmly welcome contributions from the community—whether it's fixing a bug, suggesting a feature, or improving documentation.
 
-1. **Fork** the repository.
-2. **Create** a new branch (`git checkout -b feature/AmazingFeature`).
-3. **Commit** your changes (`git commit -m 'Add some AmazingFeature'`).
-4. **Push** to the branch (`git push origin feature/AmazingFeature`).
-5. **Open** a Pull Request.
+Please read our [**Contributing Guide**](CONTRIBUTING.md) for detailed instructions on how to submit issues, propose changes, and open Pull Requests.
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
 ---
 
-## 📄 License
+## 📄 License Information
 
-Distributed under the **MIT License**. See `LICENSE` for more information.
+This project is open-source and distributed under the **MIT License**. 
+
+You are free to use, modify, and distribute this software, provided that the original copyright notice and permission notice are included in all copies or substantial portions of the software. See the `LICENSE` file for more details.
+
+---
+
+## 👨‍💻 Author
+
+**Dhaatrik Chowdhury**
 
 ---
 

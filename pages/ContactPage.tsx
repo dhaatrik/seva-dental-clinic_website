@@ -18,81 +18,81 @@ const ContactPage: React.FC = () => {
   const googleMapsApiKey = process.env.GOOGLE_MAPS_API_KEY || ""; 
 
   return (
-    <div className="py-20 max-w-7xl mx-auto px-6 space-y-32">
+    <div className="py-16 md:py-20 max-w-7xl mx-auto px-4 sm:px-6 space-y-24 md:space-y-32">
       <motion.section 
         initial="hidden"
         animate="visible"
         variants={fadeUpVariant}
         className="text-center max-w-5xl mx-auto"
       >
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-heading font-bold text-gentle-green mb-8 tracking-tight">{t('contact.title', { defaultValue: 'Contact Us & Book Your Adventure' })}</h1>
-        <p className="text-xl md:text-3xl text-secondary-text font-body font-light max-w-3xl mx-auto leading-relaxed">
+        <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-heading font-bold text-gentle-green mb-6 md:mb-8 tracking-tight">{t('contact.title', { defaultValue: 'Contact Us & Book Your Adventure' })}</h1>
+        <p className="text-lg sm:text-xl md:text-3xl text-secondary-text font-body font-light max-w-3xl mx-auto leading-relaxed px-2">
           {t('contact.subtitle', { defaultValue: "We're here to help you on your journey to a healthier smile. Reach out to us with any questions or to schedule your appointment." })}
         </p>
       </motion.section>
 
-      <div className="grid lg:grid-cols-2 gap-16 items-start">
+      <div className="grid lg:grid-cols-2 gap-10 md:gap-16 items-start">
         {/* Contact Information Section */}
         <motion.section 
           initial="hidden"
           animate="visible"
           variants={fadeUpVariant}
-          className="bg-pure-white p-10 md:p-16 rounded-[3rem] shadow-2xl border border-gentle-green/5 space-y-10 relative overflow-hidden"
+          className="bg-pure-white p-6 sm:p-10 md:p-16 rounded-[2rem] md:rounded-[3rem] shadow-2xl border border-gentle-green/5 space-y-8 md:space-y-10 relative overflow-hidden"
         >
-          <div className="absolute top-0 right-0 w-64 h-64 bg-calm-blue/10 rounded-full blur-3xl -mr-20 -mt-20"></div>
-          <h2 className="text-4xl font-heading font-bold text-gentle-green mb-8 relative z-10 tracking-tight">
+          <div className="absolute top-0 right-0 w-48 h-48 sm:w-64 sm:h-64 bg-calm-blue/10 rounded-full blur-3xl -mr-10 -mt-10 sm:-mr-20 sm:-mt-20"></div>
+          <h2 className="text-3xl sm:text-4xl font-heading font-bold text-gentle-green mb-6 md:mb-8 relative z-10 tracking-tight">
             {t('contact.getInTouch', { defaultValue: 'Get in Touch' })}
           </h2>
           
-          <div className="space-y-8 relative z-10">
-            <div className="flex items-start space-x-6 group">
+          <div className="space-y-6 md:space-y-8 relative z-10">
+            <div className="flex items-start space-x-4 sm:space-x-6 group">
               <Tooltip text={t('contact.visitClinic', { defaultValue: 'Visit our clinic' })} position="right">
-                <div className="bg-calm-blue/20 p-4 rounded-2xl group-hover:bg-warm-coral/10 transition-colors duration-300">
-                  <MapPinIcon className="w-8 h-8 text-gentle-green" />
+                <div className="bg-calm-blue/20 p-3 sm:p-4 rounded-xl sm:rounded-2xl group-hover:bg-warm-coral/10 transition-colors duration-300 flex-shrink-0">
+                  <MapPinIcon className="w-6 h-6 sm:w-8 sm:h-8 text-gentle-green" />
                 </div>
               </Tooltip>
               <div>
-                <h3 className="text-xl font-semibold text-primary-text font-heading mb-2">{t('contact.clinicAddress', { defaultValue: 'Clinic Address:' })}</h3>
-                <p className="text-secondary-text font-body leading-relaxed text-lg">{CLINIC_ADDRESS}</p>
+                <h3 className="text-lg sm:text-xl font-semibold text-primary-text font-heading mb-1 sm:mb-2">{t('contact.clinicAddress', { defaultValue: 'Clinic Address:' })}</h3>
+                <p className="text-secondary-text font-body leading-relaxed text-base sm:text-lg">{CLINIC_ADDRESS}</p>
               </div>
             </div>
             
-            <div className="flex items-start space-x-6 group">
+            <div className="flex items-start space-x-4 sm:space-x-6 group">
               <Tooltip text={t('contact.callUsTooltip', { defaultValue: 'Call us' })} position="right">
-                <div className="bg-calm-blue/20 p-4 rounded-2xl group-hover:bg-warm-coral/10 transition-colors duration-300">
-                  <PhoneIcon className="w-8 h-8 text-gentle-green" />
+                <div className="bg-calm-blue/20 p-3 sm:p-4 rounded-xl sm:rounded-2xl group-hover:bg-warm-coral/10 transition-colors duration-300 flex-shrink-0">
+                  <PhoneIcon className="w-6 h-6 sm:w-8 sm:h-8 text-gentle-green" />
                 </div>
               </Tooltip>
               <div>
-                <h3 className="text-xl font-semibold text-primary-text font-heading mb-2">{t('contact.phone', { defaultValue: 'Phone:' })}</h3>
-                <a href={`tel:${PHONE_NUMBER}`} className="text-warm-coral hover:text-gentle-green transition-colors font-body text-xl font-medium">
+                <h3 className="text-lg sm:text-xl font-semibold text-primary-text font-heading mb-1 sm:mb-2">{t('contact.phone', { defaultValue: 'Phone:' })}</h3>
+                <a href={`tel:${PHONE_NUMBER}`} className="text-warm-coral hover:text-gentle-green transition-colors font-body text-lg sm:text-xl font-medium break-all sm:break-normal">
                   {PHONE_NUMBER}
                 </a>
-                <p className="text-sm text-secondary-text mt-2 font-light">{t('contact.clickableMobile', { defaultValue: '(Clickable on mobile devices)' })}</p>
+                <p className="text-xs sm:text-sm text-secondary-text mt-1 sm:mt-2 font-light">{t('contact.clickableMobile', { defaultValue: '(Clickable on mobile devices)' })}</p>
               </div>
             </div>
             
-            <div className="flex items-start space-x-6 group">
+            <div className="flex items-start space-x-4 sm:space-x-6 group">
               <Tooltip text={t('contact.emailUsTooltip', { defaultValue: 'Email us' })} position="right">
-                <div className="bg-calm-blue/20 p-4 rounded-2xl group-hover:bg-warm-coral/10 transition-colors duration-300">
-                  <EnvelopeIcon className="w-8 h-8 text-gentle-green" />
+                <div className="bg-calm-blue/20 p-3 sm:p-4 rounded-xl sm:rounded-2xl group-hover:bg-warm-coral/10 transition-colors duration-300 flex-shrink-0">
+                  <EnvelopeIcon className="w-6 h-6 sm:w-8 sm:h-8 text-gentle-green" />
                 </div>
               </Tooltip>
               <div>
-                <h3 className="text-xl font-semibold text-primary-text font-heading mb-2">{t('contact.email', { defaultValue: 'Email:' })}</h3>
-                <a href={`mailto:${CLINIC_EMAIL}`} className="text-warm-coral hover:text-gentle-green transition-colors font-body text-xl font-medium">
+                <h3 className="text-lg sm:text-xl font-semibold text-primary-text font-heading mb-1 sm:mb-2">{t('contact.email', { defaultValue: 'Email:' })}</h3>
+                <a href={`mailto:${CLINIC_EMAIL}`} className="text-warm-coral hover:text-gentle-green transition-colors font-body text-lg sm:text-xl font-medium break-all">
                   {CLINIC_EMAIL}
                 </a>
               </div>
             </div>
           </div>
 
-          <div className="pt-10 border-t border-gentle-green/10 relative z-10">
-            <h3 className="text-2xl font-semibold text-gentle-green font-heading mb-6">{t('contact.openingHours', { defaultValue: 'Clinic Opening Hours:' })}</h3>
-            <ul className="space-y-3 text-secondary-text font-body text-lg">
+          <div className="pt-8 md:pt-10 border-t border-gentle-green/10 relative z-10">
+            <h3 className="text-xl sm:text-2xl font-semibold text-gentle-green font-heading mb-4 md:mb-6">{t('contact.openingHours', { defaultValue: 'Clinic Opening Hours:' })}</h3>
+            <ul className="space-y-2 md:space-y-3 text-secondary-text font-body text-base sm:text-lg">
               {OPENING_HOURS.map(line => (
                 <li key={line} className="flex items-center space-x-3">
-                  <span className="w-2 h-2 rounded-full bg-warm-coral"></span>
+                  <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-warm-coral flex-shrink-0"></span>
                   <span>{line}</span>
                 </li>
               ))}
@@ -105,10 +105,10 @@ const ContactPage: React.FC = () => {
           initial="hidden"
           animate="visible"
           variants={fadeUpVariant}
-          className="bg-pure-white p-10 md:p-16 rounded-[3rem] shadow-2xl border border-gentle-green/5 relative overflow-hidden"
+          className="bg-pure-white p-6 sm:p-10 md:p-16 rounded-[2rem] md:rounded-[3rem] shadow-2xl border border-gentle-green/5 relative overflow-hidden"
         >
-          <div className="absolute bottom-0 left-0 w-64 h-64 bg-warm-coral/5 rounded-full blur-3xl -ml-20 -mb-20"></div>
-          <h2 className="text-4xl font-heading font-bold text-gentle-green mb-10 text-center md:text-left relative z-10 tracking-tight">{t('contact.sendMessage', { defaultValue: 'Send Us a Message' })}</h2>
+          <div className="absolute bottom-0 left-0 w-48 h-48 sm:w-64 sm:h-64 bg-warm-coral/5 rounded-full blur-3xl -ml-10 -mb-10 sm:-ml-20 sm:-mb-20"></div>
+          <h2 className="text-3xl sm:text-4xl font-heading font-bold text-gentle-green mb-8 md:mb-10 text-center md:text-left relative z-10 tracking-tight">{t('contact.sendMessage', { defaultValue: 'Send Us a Message' })}</h2>
           <div className="relative z-10">
             <ContactForm />
           </div>

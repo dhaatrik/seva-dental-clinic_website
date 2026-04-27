@@ -1,20 +1,13 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
-
-import enTranslation from './locales/en.json';
-import hiTranslation from './locales/hi.json';
-import bnTranslation from './locales/bn.json';
+import resourcesToBackend from 'i18next-resources-to-backend';
 
 i18n
   .use(LanguageDetector)
   .use(initReactI18next)
+  .use(resourcesToBackend((language: string, namespace: string) => import(`./locales/${language}.json`)))
   .init({
-    resources: {
-      en: { translation: enTranslation },
-      hi: { translation: hiTranslation },
-      bn: { translation: bnTranslation }
-    },
     fallbackLng: 'en',
     interpolation: {
       escapeValue: false

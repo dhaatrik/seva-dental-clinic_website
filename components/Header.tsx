@@ -1,8 +1,8 @@
 
 import React, { useState, useEffect } from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import { NAV_LINKS, CLINIC_NAME, PHONE_NUMBER } from '../constants';
-import { LogoIcon, MenuIcon, XIcon, ChevronRightIcon } from './IconComponents';
+import { NAV_LINKS, CLINIC_NAME } from '../constants';
+import { LogoIcon, MenuIcon, XIcon, ChevronRightIcon, SparkleIcon } from './IconComponents';
 import Button from './Button';
 import Tooltip from './Tooltip';
 import { useLenis } from 'lenis/react';
@@ -46,10 +46,19 @@ const Header: React.FC = () => {
       document.body.style.overflow = '';
       lenis?.start();
     }
+    
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape' && isMobileMenuOpen) {
+        setIsMobileMenuOpen(false);
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+
     // Cleanup on component unmount
     return () => {
       document.body.style.overflow = '';
       lenis?.start();
+      window.removeEventListener('keydown', handleKeyDown);
     };
   }, [isMobileMenuOpen, lenis]);
 
@@ -57,53 +66,65 @@ const Header: React.FC = () => {
 
   return (
     <>
-      <header className={`fixed top-0 w-full z-50 transition-all duration-700 ease-in-out ${isScrolled ? 'bg-pure-white/80 backdrop-blur-xl shadow-[0_4px_30px_rgba(0,0,0,0.05)] border-b border-gentle-green/10 py-3' : 'bg-transparent py-6'}`}>
+      <header className={`fixed top-0 w-full z-50 transition-all duration-700 ease-in-out ${isScrolled ? 'bg-pure-white/90 backdrop-blur-xl shadow-lg border-b border-primary-text/5 py-4' : 'bg-transparent py-8'}`}>
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="flex justify-between items-center">
             <Tooltip text="Go to homepage" position="right">
-              <Link to="/" className="flex items-center space-x-3 text-2xl font-heading font-bold text-gentle-green hover:text-opacity-80 transition-all duration-300 group" onClick={closeMobileMenu}>
+              <Link to="/" className="flex items-center space-x-3 text-xl font-heading font-bold text-gentle-green hover:opacity-80 transition-opacity duration-300 group" onClick={closeMobileMenu}>
                 <div className="bg-gentle-green/5 p-2 rounded-xl group-hover:bg-gentle-green/10 transition-colors">
-                  <LogoIcon className="w-8 h-8 text-warm-coral" />
+                  <LogoIcon className="w-7 h-7 text-warm-coral" />
                 </div>
-                <span className="tracking-wide">{CLINIC_NAME}</span>
+                <span className="tracking-tight">{CLINIC_NAME}</span>
               </Link>
             </Tooltip>
 
-            <nav className="hidden md:flex space-x-8 items-center">
+            <nav className="hidden md:flex space-x-8 items-center" aria-label="Main Navigation">
               {NAV_LINKS.map((link) => {
                 const linkName = t(`nav.${link.name.toLowerCase().replace(' ', '')}`, { defaultValue: link.name });
+                const isSmileQuiz = link.name === 'Smile Quiz';
                 return (
                   <NavLink
                     key={link.name}
                     to={link.path}
-                    className={({ isActive }) =>
-                      `relative font-heading font-semibold text-sm uppercase tracking-widest transition-colors hover:text-warm-coral py-2 ${
-                        isActive ? 'text-warm-coral' : 'text-primary-text'
-                      }`
-                    }
+                    className={({ isActive }) => {
+                      if (isSmileQuiz) {
+                        return `relative font-body font-bold text-[14px] transition-all py-1.5 px-5 rounded-full bg-yellow-400 text-yellow-900 shadow-md hover:bg-yellow-300 hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 flex items-center gap-1.5 ${
+                          isActive ? 'ring-2 ring-yellow-500 ring-offset-2' : ''
+                        }`;
+                      }
+                      return `relative font-body font-medium text-[15px] transition-colors py-2 group ${
+                        isActive ? 'text-gentle-green' : 'text-primary-text/70 hover:text-gentle-green'
+                      }`;
+                    }}
                   >
                     {({ isActive }) => (
                       <>
-                        {linkName}
-                        {isActive && (
-                          <span className="absolute bottom-0 left-0 w-full h-0.5 bg-warm-coral rounded-full transform origin-left transition-transform duration-300"></span>
+                        {isSmileQuiz ? (
+                          <>
+                            <SparkleIcon className="w-4 h-4 text-yellow-700 animate-pulse" />
+                            {linkName}
+                          </>
+                        ) : (
+                          <>
+                            {linkName}
+                            <span className={`absolute bottom-0 left-0 w-full h-[2px] rounded-full transform origin-left transition-transform duration-300 ${isActive ? 'scale-x-100 bg-gentle-green' : 'scale-x-0 bg-gentle-green group-hover:scale-x-100 opacity-50'}`}></span>
+                          </>
                         )}
                       </>
                     )}
                   </NavLink>
                 );
               })}
-              <div className="flex items-center space-x-4 pl-4 border-l border-gentle-green/20">
+              <div className="flex items-center space-x-5 pl-5 border-l border-primary-text/10">
                 <button 
                   onClick={toggleLanguage}
-                  className="font-heading font-bold text-sm text-gentle-green hover:text-warm-coral transition-colors px-2 py-1 border border-gentle-green/20 rounded-md"
+                  className="font-body font-medium text-[13px] text-primary-text/70 hover:text-gentle-green transition-colors px-2 py-1 rounded bg-primary-text/5 hover:bg-gentle-green/10 flex items-center justify-center"
                   aria-label="Toggle Language"
                 >
                   {getLangLabel()}
                 </button>
-                <Button to="/contact" variant="primary" size="medium" className="group shadow-md hover:shadow-lg" tooltip="Schedule your dental consultation">
+                <Button to="/contact" variant="secondary" size="small" className="group shadow-sm hover:shadow-md font-body font-medium" tooltip="Schedule your dental consultation">
                   {t('header.bookConsultation', { defaultValue: 'Book Consultation' })}
-                  <ChevronRightIcon className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
                 </Button>
               </div>
             </nav>
@@ -111,7 +132,7 @@ const Header: React.FC = () => {
             <div className="md:hidden flex items-center space-x-4">
               <button 
                 onClick={toggleLanguage}
-                className="font-heading font-bold text-sm text-gentle-green hover:text-warm-coral transition-colors px-2 py-1 border border-gentle-green/20 rounded-md"
+                className="font-body font-medium text-xs text-primary-text/70 hover:text-gentle-green transition-colors px-2 py-1 rounded bg-primary-text/5 flex items-center justify-center"
                 aria-label="Toggle Language"
               >
                 {getLangLabel()}
@@ -119,7 +140,7 @@ const Header: React.FC = () => {
               <Tooltip text={isMobileMenuOpen ? "Close Menu" : "Open Menu"} position="bottom">
                 <button
                   onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                  className="text-primary-text hover:text-warm-coral focus:outline-none p-2 rounded-full hover:bg-gentle-green/5 transition-colors"
+                  className="text-primary-text hover:text-gentle-green focus:outline-none p-2 rounded-full hover:bg-gentle-green/5 transition-colors"
                   aria-label="Toggle menu"
                   aria-expanded={isMobileMenuOpen}
                   aria-controls={mobileMenuId}
@@ -144,26 +165,32 @@ const Header: React.FC = () => {
           <nav className="flex flex-col p-6 space-y-4">
             {NAV_LINKS.map((link) => {
               const linkName = t(`nav.${link.name.toLowerCase().replace(' ', '')}`, { defaultValue: link.name });
+              const isSmileQuiz = link.name === 'Smile Quiz';
               return (
                 <NavLink
                   key={link.name}
                   to={link.path}
                   onClick={closeMobileMenu}
-                  className={({ isActive }) =>
-                    `block w-full text-left py-3 px-4 font-heading font-semibold uppercase tracking-widest rounded-xl transition-all text-lg ${
-                      isActive ? 'text-warm-coral bg-warm-coral/5' : 'text-primary-text hover:bg-gentle-green/5'
-                    }`
-                  }
+                  className={({ isActive }) => {
+                    if (isSmileQuiz) {
+                      return `flex items-center gap-2 w-full text-left py-3 px-4 font-body font-bold rounded-xl transition-all text-lg tracking-tight bg-yellow-400 text-yellow-900 shadow-sm ${
+                        isActive ? 'ring-2 ring-yellow-500 ring-offset-2' : ''
+                      }`;
+                    }
+                    return `block w-full text-left py-3 px-4 font-body font-medium rounded-xl transition-all text-lg tracking-tight ${
+                      isActive ? 'text-gentle-green bg-gentle-green/5 font-semibold' : 'text-primary-text hover:bg-black/5'
+                    }`;
+                  }}
                 >
+                  {isSmileQuiz && <SparkleIcon className="w-5 h-5 text-yellow-700 animate-pulse" />}
                   {linkName}
                 </NavLink>
               );
             })}
-            <div className="pt-6 mt-2 border-t border-gentle-green/10 space-y-4">
-              <Button to="/contact" variant="primary" size="large" fullWidth onClick={closeMobileMenu} className="shadow-md">
+            <div className="pt-6 mt-2 border-t border-primary-text/10 space-y-4">
+              <Button to="/contact" variant="secondary" size="medium" fullWidth onClick={closeMobileMenu} className="shadow-sm hover:shadow-md font-body font-medium">
                 {t('header.bookConsultation', { defaultValue: 'Book Your Adventure' })}
               </Button>
-              <a href={`tel:${PHONE_NUMBER}`} className="block text-center text-secondary-text hover:text-warm-coral py-3 font-body font-medium transition-colors">{t('header.call', { defaultValue: 'Call' })}: {PHONE_NUMBER}</a>
             </div>
           </nav>
         </div>

@@ -26,20 +26,35 @@ const SkeletonCard: React.FC<SkeletonCardProps> = ({ type }) => {
 
   // Default to blog post skeleton
   return (
-    <Card className="flex flex-col h-full animate-pulse">
-      <div className="w-full h-48 bg-gray-300"></div>
-      <div className="p-6 flex-grow flex flex-col">
-        <div className="h-6 bg-gray-300 rounded w-3/4 mb-3"></div>
-        <div className="h-3 bg-gray-300 rounded w-1/2 mb-4"></div>
-        <div className="flex-grow space-y-2">
-          <div className="h-4 bg-gray-300 rounded w-full"></div>
-          <div className="h-4 bg-gray-300 rounded w-5/6"></div>
-        </div>
-        <div className="mt-auto pt-4">
-          <div className="h-9 bg-gray-300 rounded w-full"></div>
+    <div className="bg-pure-white rounded-[2.5rem] overflow-hidden shadow-lg border border-gentle-green/10 flex flex-col h-full animate-pulse">
+      {/* Image Skeleton */}
+      <div className="relative h-72 w-full bg-gray-200">
+        <div className="absolute bottom-6 left-8 bg-gray-300 w-24 h-6 rounded-full" />
+      </div>
+      
+      {/* Content Skeleton */}
+      <div className="p-10 flex-grow flex flex-col">
+        <div className="h-8 bg-gray-300 rounded w-full mb-3"></div>
+        <div className="h-8 bg-gray-300 rounded w-2/3 mb-6"></div>
+        
+        <div className="h-4 bg-gray-300 rounded w-full mb-2"></div>
+        <div className="h-4 bg-gray-300 rounded w-full mb-2"></div>
+        <div className="h-4 bg-gray-300 rounded w-3/4 mb-10 flex-grow"></div>
+        
+        {/* Footer Skeleton */}
+        <div className="mt-auto pt-10 border-t border-gentle-green/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+          <div className="flex items-center space-x-4">
+             <div className="w-12 h-12 rounded-full bg-gray-300 border border-white/20"></div>
+             <div className="flex flex-col space-y-2">
+               <div className="w-12 h-3 bg-gray-300 rounded"></div>
+               <div className="w-32 h-4 bg-gray-300 rounded"></div>
+             </div>
+          </div>
+          
+          <div className="w-32 h-12 bg-gray-300 rounded-full"></div>
         </div>
       </div>
-    </Card>
+    </div>
   );
 };
 
