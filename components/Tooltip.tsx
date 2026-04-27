@@ -5,9 +5,10 @@ interface TooltipProps {
   text: string;
   children: React.ReactNode;
   position?: 'top' | 'bottom' | 'left' | 'right';
+  fullWidth?: boolean;
 }
 
-const Tooltip: React.FC<TooltipProps> = ({ text, children, position = 'top' }) => {
+const Tooltip: React.FC<TooltipProps> = ({ text, children, position = 'top', fullWidth = false }) => {
   const [isVisible, setIsVisible] = useState(false);
 
   const positionClasses = {
@@ -26,7 +27,7 @@ const Tooltip: React.FC<TooltipProps> = ({ text, children, position = 'top' }) =
 
   return (
     <div 
-      className="relative inline-block"
+      className={`relative ${fullWidth ? 'block w-full' : 'inline-block'}`}
       onMouseEnter={() => setIsVisible(true)}
       onMouseLeave={() => setIsVisible(false)}
       onFocus={() => setIsVisible(true)}

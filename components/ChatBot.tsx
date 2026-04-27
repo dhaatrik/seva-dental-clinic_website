@@ -3,6 +3,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import Modal from './Modal';
 import { ChatBotIcon, SendIcon, XIcon, ChatHeaderIcon } from './IconComponents';
 import { getChatbotResponse } from '../services/geminiService';
+import { PHONE_NUMBER } from '../constants';
 import LoadingSpinner from './LoadingSpinner';
 import Tooltip from './Tooltip';
 import { useTranslation } from 'react-i18next';
@@ -15,34 +16,74 @@ interface Message {
 const ChatBot: React.FC = () => {
   const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
-  const [messages, setMessages] = useState<Message[]>([
-    { role: 'model', text: t('chatbot.initialMessage', { defaultValue: "Hello! I'm the Smile Guide. How can I help you on your adventure today?" }) }
-  ]);
+  const [messages, setMessages] = useState<Message[]>([]);
   const [userInput, setUserInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+  const [notFoundCount, setNotFoundCount] = useState(0);
+  const [isEscalated, setIsEscalated] = useState(false);
+  const [userPhone, setUserPhone] = useState('');
   const messagesEndRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (messages.length === 0) {
+      setMessages([{ role: 'model', text: t('chatbot.initialMessage', { defaultValue: "Hello! I'm the Smile Guide. How can I help you on your adventure today?" }) }]);
+    }
+  }, [t, messages.length]);
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
-  useEffect(scrollToBottom, [messages, isLoading]);
+  useEffect(scrollToBottom, [messages, isLoading, isEscalated]);
 
   const toggleChat = () => {
     setIsOpen(!isOpen);
+  };
+
+  const handlePhoneSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!userPhone.trim()) return;
+    setMessages(prev => [...prev, { role: 'user', text: userPhone }, { role: 'model', text: `Thank you. Our front desk will call you at ${userPhone} shortly.` }]);
+    setUserPhone('');
   };
 
   const handleSendMessage = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!userInput.trim() || isLoading) return;
 
-    const newMessages: Message[] = [...messages, { role: 'user', text: userInput }];
+    const currentInput = userInput;
+    const lowerInput = currentInput.toLowerCase();
+    
+    // Check for escalation triggers
+    if (lowerInput.includes('human') || lowerInput.includes('emergency')) {
+      const newMessages: Message[] = [...messages, { role: 'user', text: currentInput }];
+      setMessages([...newMessages, { role: 'model', text: t('chatbot.handoffMessage', { defaultValue: "I'm sorry, I'm having trouble answering that. Would you like our human team to call you? Please enter your phone number if it's an emergency or urgent." }) }]);
+      setUserInput('');
+      setIsEscalated(true);
+      return;
+    }
+
+    const newMessages: Message[] = [...messages, { role: 'user', text: currentInput }];
     setMessages(newMessages);
     setUserInput('');
     setIsLoading(true);
 
     const history = messages.map(({ role, text }) => ({ role, text }));
-    const botResponse = await getChatbotResponse(history, userInput);
+    let botResponse = await getChatbotResponse(history, currentInput);
+    
+    let currentNotFoundCount = notFoundCount;
+    if (botResponse.includes('[NOT_FOUND]')) {
+      botResponse = botResponse.replace('[NOT_FOUND]', '').trim();
+      currentNotFoundCount++;
+      setNotFoundCount(currentNotFoundCount);
+    } else {
+      setNotFoundCount(0); // Reset on success
+    }
+
+    if (currentNotFoundCount >= 2) {
+      setIsEscalated(true);
+      botResponse += " " + t('chatbot.handoffMessage', { defaultValue: "Would you like our human team to call you? Please enter your phone number." });
+    }
     
     setMessages([...newMessages, { role: 'model', text: botResponse }]);
     setIsLoading(false);
@@ -104,27 +145,51 @@ const ChatBot: React.FC = () => {
                 </div>
 
                 <footer className="p-4 bg-pure-white border-t border-gentle-green/10 z-10">
-                    <form onSubmit={handleSendMessage} className="flex items-center space-x-3">
-                        <input
-                            type="text"
-                            value={userInput}
-                            onChange={(e) => setUserInput(e.target.value)}
-                            placeholder={t('chatbot.placeholder', { defaultValue: "Type your message..." })}
-                            className="flex-grow px-5 py-3 bg-calm-blue/10 border border-transparent rounded-full focus:outline-none focus:ring-2 focus:ring-gentle-green/50 focus:bg-pure-white text-primary-text placeholder:text-secondary-text/60 font-body text-sm transition-all"
-                            disabled={isLoading}
-                            aria-label={t('chatbot.inputAria', { defaultValue: "Chat input" })}
-                        />
-                        <Tooltip text={t('chatbot.sendTooltip', { defaultValue: "Send message" })} position="top">
-                            <button
-                                type="submit"
-                                disabled={isLoading || !userInput.trim()}
-                                className="w-12 h-12 bg-gentle-green text-pure-white rounded-full flex items-center justify-center flex-shrink-0 disabled:opacity-50 disabled:cursor-not-allowed hover:bg-opacity-90 hover:shadow-md transition-all transform active:scale-95"
-                                aria-label={t('chatbot.sendAria', { defaultValue: "Send message" })}
-                            >
-                                <SendIcon className="w-5 h-5 ml-1"/>
-                            </button>
-                        </Tooltip>
-                    </form>
+                    {isEscalated ? (
+                      <form onSubmit={handlePhoneSubmit} className="flex items-center space-x-3">
+                          <input
+                              type="tel"
+                              value={userPhone}
+                              onChange={(e) => setUserPhone(e.target.value)}
+                              placeholder={t('chatbot.phonePlaceholder', { defaultValue: "Enter phone number" })}
+                              className="flex-grow px-5 py-3 bg-calm-blue/10 border border-transparent rounded-full focus:outline-none focus:ring-2 focus:ring-gentle-green/50 focus:bg-pure-white text-primary-text placeholder:text-secondary-text/60 font-body text-sm transition-all"
+                              disabled={isLoading}
+                              aria-label="Phone input"
+                          />
+                          <Tooltip text={t('chatbot.sendTooltip', { defaultValue: "Send" })} position="top">
+                              <button
+                                  type="submit"
+                                  disabled={isLoading || !userPhone.trim()}
+                                  className="w-12 h-12 bg-warm-coral text-pure-white rounded-full flex items-center justify-center flex-shrink-0 disabled:opacity-50 disabled:cursor-not-allowed hover:bg-opacity-90 hover:shadow-md transition-all transform active:scale-95"
+                                  aria-label="Send phone number"
+                              >
+                                  <SendIcon className="w-5 h-5 ml-1"/>
+                              </button>
+                          </Tooltip>
+                      </form>
+                    ) : (
+                      <form onSubmit={handleSendMessage} className="flex items-center space-x-3">
+                          <input
+                              type="text"
+                              value={userInput}
+                              onChange={(e) => setUserInput(e.target.value)}
+                              placeholder={t('chatbot.placeholder', { defaultValue: "Type your message..." })}
+                              className="flex-grow px-5 py-3 bg-calm-blue/10 border border-transparent rounded-full focus:outline-none focus:ring-2 focus:ring-gentle-green/50 focus:bg-pure-white text-primary-text placeholder:text-secondary-text/60 font-body text-sm transition-all"
+                              disabled={isLoading}
+                              aria-label={t('chatbot.inputAria', { defaultValue: "Chat input" })}
+                          />
+                          <Tooltip text={t('chatbot.sendTooltip', { defaultValue: "Send message" })} position="top">
+                              <button
+                                  type="submit"
+                                  disabled={isLoading || !userInput.trim()}
+                                  className="w-12 h-12 bg-gentle-green text-pure-white rounded-full flex items-center justify-center flex-shrink-0 disabled:opacity-50 disabled:cursor-not-allowed hover:bg-opacity-90 hover:shadow-md transition-all transform active:scale-95"
+                                  aria-label={t('chatbot.sendAria', { defaultValue: "Send message" })}
+                              >
+                                  <SendIcon className="w-5 h-5 ml-1"/>
+                              </button>
+                          </Tooltip>
+                      </form>
+                    )}
                 </footer>
             </div>
         </div>

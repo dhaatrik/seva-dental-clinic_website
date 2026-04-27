@@ -10,7 +10,11 @@
   },
   "header": {
     "bookConsultation": "Book Consultation",
-    "call": "Call"
+    "call": "Call",
+    "emergency": "Dental Emergency?",
+    "emergencySubtitle": "Call for immediate assistance",
+    "enableAnimations": "Enable Animations",
+    "disableAnimations": "Disable Animations"
   },
   "home": {
     "heroTitle": "Your Smile Adventure Begins Here",
@@ -131,7 +135,13 @@
     "noArticlesFound": "No articles found matching your search.",
     "toggleAnswer": "Toggle answer",
     "closeModal": "Close modal",
-    "loading": "Loading..."
+    "loading": "Loading...",
+    "interactiveMap": "Interactive Mouth Map",
+    "interactiveMapDesc": "Click on a tooth or area to explore related treatments.",
+    "allCategories": "All Categories",
+    "getGuide": "Get Your Guide",
+    "downloadGuide": "Download the Complete Guide to this Service",
+    "evalSurvey": "Take the Candidate Survey"
   },
   "footer": {
     "description": "Providing gentle, expert dental care for the whole family in Kolkata.",
@@ -151,7 +161,7 @@
   "hero": {
     "titleLine1": "Your Smile Adventure",
     "titleLine2": "Begins Here.",
-    "subtitle": "Welcome to Seva Dental Clinic. Experience world-class dental care in a serene, spa-like environment designed for your comfort and confidence.",
+    "subtitle": "Welcome to Seva Dental. Experience world-class dental care in a serene, spa-like environment designed for your comfort and confidence.",
     "bookConsultationTooltip": "Book your consultation today",
     "bookConsultation": "Book Consultation",
     "takeQuizTooltip": "Discover your smile score",
@@ -160,10 +170,10 @@
   "about": {
     "title": "About Seva Dental Clinic",
     "subtitle": "\"Your Smile Adventure Begins Here.\" This is more than a tagline for us; it's our guiding philosophy.",
-    "doctorTitle": "Meet Dr. Krishnendu Bhattacharya",
-    "doctorP1": "Dr. Krishnendu Bhattacharya is a dedicated and compassionate dentist with a passion for creating beautiful, healthy smiles. With years of experience in various dental disciplines, Dr. Bhattacharya believes in a patient-centric approach, taking the time to understand each individual's needs and concerns.",
+    "doctorTitle": "Meet Dr. K Bhattacharya",
+    "doctorP1": "Dr. K Bhattacharya is a dedicated and compassionate dentist with a passion for creating beautiful, healthy smiles. With years of experience in various dental disciplines, Dr. K Bhattacharya believes in a patient-centric approach, taking the time to understand each individual's needs and concerns.",
     "doctorP2": "His qualifications include [Placeholder for Qualifications, e.g., BDS, MDS in a specialty]. He is committed to continuous learning and stays updated with the latest advancements in dental technology and techniques to provide the best possible care.",
-    "doctorP3": "Dr. Bhattacharya's patient care philosophy revolves around trust, comfort, and education. He strives to demystify dental procedures, alleviate anxiety, and empower patients to take an active role in their oral health journey. He is particularly skilled in [Placeholder for skills, e.g., cosmetic dentistry, pediatric care, painless procedures].",
+    "doctorP3": "Dr. K Bhattacharya's patient care philosophy revolves around trust, comfort, and education. He strives to demystify dental procedures, alleviate anxiety, and empower patients to take an active role in their oral health journey. He is particularly skilled in [Placeholder for skills, e.g., cosmetic dentistry, pediatric care, painless procedures].",
     "clinicTitle": "Our Clinic Environment",
     "clinicSubtitle": "Experience a sanctuary of dental wellness. Our clinic is a thoughtfully designed, serene space where your comfort is our priority. Combining a calming atmosphere with cutting-edge technology, we ensure every visit is relaxing, efficient, and focused on delivering the highest standard of care.",
     "clinicFooter": "From our reception area to our treatment rooms, every detail is considered to make your visit pleasant. We adhere to the highest standards of hygiene and safety.",
@@ -238,7 +248,9 @@
     "placeholder": "Type your message...",
     "inputAria": "Chat input",
     "sendTooltip": "Send message",
-    "sendAria": "Send message"
+    "sendAria": "Send message",
+    "handoffMessage": "I'm sorry, I'm having trouble answering that. Would you like our human team to call you? Please enter your phone number if it's an emergency or urgent.",
+    "phonePlaceholder": "Enter phone number"
   },
   "blog": {
     "title": "The Explorer's Guide",
@@ -264,7 +276,7 @@
     },
     "amit-k": {
       "name": "Amit K.",
-      "quote": "As a busy professional, I appreciate the efficiency and clarity at Seva Dental. Booking was easy, and Dr. Bhattacharya explained everything about my implant procedure clearly. Highly recommend!"
+      "quote": "As a busy professional, I appreciate the efficiency and clarity at Seva Dental. Booking was easy, and Dr. K Bhattacharya explained everything about my implant procedure clearly. Highly recommend!"
     },
     "sunita-m": {
       "name": "Sunita M.",

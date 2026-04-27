@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import { HashRouter } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
+import { AccessibilityProvider } from './contexts/AccessibilityContext';
 import './i18n';
 
 const rootElement = document.getElementById('root');
@@ -14,10 +15,12 @@ if (!rootElement) {
 const root = ReactDOM.createRoot(rootElement);
 root.render(
   <React.StrictMode>
-    <HelmetProvider>
-      <HashRouter>
-        <App />
-      </HashRouter>
-    </HelmetProvider>
+    <AccessibilityProvider>
+      <HelmetProvider>
+        <HashRouter>
+          <App />
+        </HashRouter>
+      </HelmetProvider>
+    </AccessibilityProvider>
   </React.StrictMode>
 );

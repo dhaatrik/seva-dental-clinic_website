@@ -1,6 +1,6 @@
 {
-  "name": "Seva Dental Clinic - Your Smile Adventure",
-  "description": "A welcoming, informative, and engaging website for Seva Dental Clinic, designed to demystify dental care and create a positive patient experience. Features an interactive 'Smile Score' quiz with personalized tips powered by Gemini API.",
+  "name": "Seva Dental - Your Smile Adventure",
+  "description": "A welcoming, informative, and engaging website for Seva Dental, designed to demystify dental care and create a positive patient experience. Features an interactive 'Smile Score' quiz with personalized tips powered by Gemini API.",
   "requestFramePermissions": [],
   "prompt": ""
 }
